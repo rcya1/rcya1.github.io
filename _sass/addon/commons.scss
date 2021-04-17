@@ -660,17 +660,19 @@ $sidebar-display: "sidebar-display";
       font-weight: 500;
       font-size: 1.5rem;
       letter-spacing: 0.5px;
+      color: #B2B2B2;
     }
   }
 
   .site-subtitle {
     font-size: 95%;
-    color: #828282;
+    color: #B2B2B2;
     line-height: 1.2rem;
     word-spacing: 1px;
     margin: 0.5rem 1.5rem 0.5rem 1.5rem;
     min-height: 3rem; // avoid vertical shifting in multi-line words
     user-select: none;
+    font-style: normal !important;
   }
 
   .nav-link {

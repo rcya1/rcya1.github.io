@@ -17,7 +17,7 @@ timezone: America/New_York
 # --------------------------
 title: Ryan Chang                          # the main title
 
-tagline: High school senior interested in studying computer science   # it will display as the sub-title
+tagline: Current high school senior going to MIT this fall to study computer science # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Personal website for a student interested in studying computer science

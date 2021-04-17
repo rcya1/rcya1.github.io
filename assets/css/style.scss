@@ -4,3 +4,8 @@
 $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 
 @import "{{ site.theme }}";
+
+.projects-header {
+    text-align: center;
+    font-size: 2.0rem;
+}
