@@ -1,6 +1,6 @@
 ---
 title: Four Years of AMC, Wrapped
-date: 2021-04-17 00:00:00 -0500
+date: 2021-04-17 11:30:00 -0500
 categories: [Blogs, Math]
 tags: [blog, math, amc, aime, usamo]
 math: true
