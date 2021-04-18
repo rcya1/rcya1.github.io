@@ -9,3 +9,86 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
     text-align: center;
     font-size: 2.0rem;
 }
+
+mjx-container {
+    overflow-x: auto;
+    overflow-y: visible;
+
+    // Black magic wizardry hack to prevent vertical scrollbars
+    padding-bottom: 10px; margin-bottom: -10px;
+    padding-top: 10px; margin-top: -10px;
+}
+
+blockquote {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+blockquote hr {
+    margin: .5em 0;
+}
+
+.blockquote-definition {
+    color: #285b2a;
+    background-color: #dbefdc;
+    border-color: #c9e7cb
+}
+
+.blockquote-definition:before {
+    content: "Definition\A";
+    white-space: pre;
+    font-weight: 700;
+    text-decoration: italicized;
+}
+
+.blockquote-theorem {
+    color: #02587f;
+    background-color: #cdeefd;
+    border-color: #b4e6fc;
+}
+
+.blockquote-theorem:before {
+    content: "Theorem\A";
+    white-space: pre;
+    font-weight: 700;
+    text-decoration: italicized;
+}
+
+.blockquote-example {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+}
+
+.blockquote-example:before {
+    content: "Example\A";
+    white-space: pre;
+    font-weight: 700;
+    text-decoration: italicized;
+}
+
+.blockquote-warning {
+    color: #852d12;
+    background-color: #ffddd3;
+    border-color: #ffc9ba;
+}
+
+.blockquote-warning:before {
+    content: "Warning\A";
+    white-space: pre;
+    font-weight: 700;
+    text-decoration: italicized;
+}
+
+.blockquote-note {
+    color: #02587f;
+    background-color: #cdeefd;
+    border-color: #b4e6fc;
+}
+
+.blockquote-warning:note {
+    content: "Note\A";
+    white-space: pre;
+    font-weight: 700;
+    text-decoration: italicized;
+}
