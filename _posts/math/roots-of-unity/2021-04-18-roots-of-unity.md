@@ -1,7 +1,7 @@
 ---
 title: Roots of Unity Filter Part 2 - Roots of Unity
 date: 2021-04-18 15:00:00 -0400
-categories: [Math, Roots of Unity Filter]
+categories: [Math Articles, Roots of Unity Filter]
 tags: [math, article, roots of unity filter, roots of unity]
 math: true
 ---
