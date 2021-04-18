@@ -17,7 +17,7 @@ In the summers of 2018-2020, I was a research intern at the Life and Light Labor
 I presented my work at the Liberty Science Center during the Partners in Science Symposium. I was also a co-author of the following paper:
 
 [Fan, Y., W. Li, N. Chen, J.-H. Ahn, Y.-J. Park, S. Kratzer, T. Schroeder, J. Ishizaka, R. Chang, and K. Stamnes, OC-SMART: 
-A machine learning based data analysis platform for satellite ocean color sensors, Remote Sensing of the Environment, conditionally accepted, 2020.](https://www.sciencedirect.com/science/article/abs/pii/S003442572030609X)
+A machine learning based data analysis platform for satellite ocean color sensors, Remote Sensing of Environment, Volume 253, 2021, 112236, ISSN 0034-4257](https://www.sciencedirect.com/science/article/abs/pii/S003442572030609X)
 
 ## High School
 
