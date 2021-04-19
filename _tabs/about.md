@@ -12,7 +12,7 @@ Besides computer science, I'm also interested in math, playing video games, solv
 
 ## Internship at Stevens Institute of Technology
 
-In the summers of 2018-2020, I was a research intern at the Life and Light Laboratory at Stevens Institute of Technology in Hoboken. While there, I helped write an algorithm for performing atmospheric correction on ocean satellite data, which helps calculate valuable parameters such as chlorophyll concentration and aerosol optical depth.
+During the summers of 2018-2020, I was a research intern at the Life and Light Laboratory at Stevens Institute of Technology in Hoboken. While there, I helped write an algorithm for performing atmospheric correction on ocean satellite data, which helps calculate valuable parameters such as chlorophyll concentration and aerosol optical depth.
 
 I presented my work at the Liberty Science Center during the Partners in Science Symposium. I was also a co-author of the following paper:
 

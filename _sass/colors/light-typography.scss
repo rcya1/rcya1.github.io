@@ -71,4 +71,34 @@
     --footer-bg-color: #ffffff;
     --footnote-target-bg: lightcyan;
     --footer-link: #424242;
+
+    .blockquote-definition {
+      color: #285b2a;
+      background-color: #dbefdc;
+      border-color: #c9e7cb
+    }
+
+    .blockquote-theorem {
+      color: #02587f;
+      background-color: #cdeefd;
+      border-color: #b4e6fc;
+    }
+
+    .blockquote-example {
+      color: #383d41;
+      background-color: #e2e3e5;
+      border-color: #d6d8db;
+    }
+
+    .blockquote-warning {
+      color: #852d12;
+      background-color: #ffddd3;
+      border-color: #ffc9ba;
+    }
+
+    .blockquote-note {
+      color: #02587f;
+      background-color: #cdeefd;
+      border-color: #b4e6fc;
+    }
   } // light-scheme

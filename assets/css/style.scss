@@ -20,75 +20,35 @@ mjx-container {
 }
 
 blockquote {
-    padding-top: .5em;
-    padding-bottom: .5em;
+    padding: .5em;
 }
 
 blockquote hr {
     margin: .5em 0;
 }
 
-.blockquote-definition {
-    color: #285b2a;
-    background-color: #dbefdc;
-    border-color: #c9e7cb
+blockquote:before {
+    white-space: pre;
+    font-weight: 700;
+    text-decoration: italicized;
 }
 
 .blockquote-definition:before {
     content: "Definition\A";
-    white-space: pre;
-    font-weight: 700;
-    text-decoration: italicized;
-}
-
-.blockquote-theorem {
-    color: #02587f;
-    background-color: #cdeefd;
-    border-color: #b4e6fc;
 }
 
 .blockquote-theorem:before {
     content: "Theorem\A";
-    white-space: pre;
-    font-weight: 700;
-    text-decoration: italicized;
-}
-
-.blockquote-example {
-    color: #383d41;
-    background-color: #e2e3e5;
-    border-color: #d6d8db;
 }
 
 .blockquote-example:before {
     content: "Example\A";
-    white-space: pre;
-    font-weight: 700;
-    text-decoration: italicized;
-}
-
-.blockquote-warning {
-    color: #852d12;
-    background-color: #ffddd3;
-    border-color: #ffc9ba;
 }
 
 .blockquote-warning:before {
     content: "Warning\A";
-    white-space: pre;
-    font-weight: 700;
-    text-decoration: italicized;
 }
 
-.blockquote-note {
-    color: #02587f;
-    background-color: #cdeefd;
-    border-color: #b4e6fc;
-}
-
-.blockquote-warning:note {
+.blockquote-note:before {
     content: "Note\A";
-    white-space: pre;
-    font-weight: 700;
-    text-decoration: italicized;
 }

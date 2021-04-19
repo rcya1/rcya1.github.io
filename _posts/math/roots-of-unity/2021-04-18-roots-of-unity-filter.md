@@ -258,7 +258,7 @@ $$S_1 - S_2 = \dfrac{P(\omega) + P(\omega^3) + P(\omega^5)}{3} = \dfrac{3^{1002}
 
 <blockquote class="blockquote-note">
 <hr>
-> The original problem was part of a mock AIME and asked for the answer mod $1000$. Since this post is about roots of unity filter, we won't cover that part in depth, but to calculate the value mod $1000$, you could apply the Euler's Totient Theorem with $\phi(1000) = 40$ to find that $3^{1001} \equiv 3 \text{ } (\text{mod } 1000)$. Then, the answer is $(2 * 3) \text{ mod 1000} = \boxed{006}$.
+The original problem was part of a mock AIME and asked for the answer mod $1000$. Since this post is about roots of unity filter, we won't cover that part in depth, but to calculate the value mod $1000$, you could apply the Euler's Totient Theorem with $\phi(1000) = 40$ to find that $3^{1001} \equiv 3 \text{ } (\text{mod } 1000)$. Then, the answer is $(2 * 3) \text{ mod 1000} = \boxed{006}$.
 </blockquote>
 
 ## Final Notes

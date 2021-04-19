@@ -176,19 +176,19 @@ $$46x + 56y = \gcd(46, 56)$$
 
 To do this, we first write $56$ as the sum of a multiple of $46$ and a remainder.
 
-$$56 = \colorbox{aqua}{46}(1) + \colorbox{orange}{10}$$
+$$56 = \colorbox{Aquamarine}{46}(1) + \colorbox{BurntOrange}{10}$$
 
 Next, this may seem pretty arbitrary, but we repeat the same process, this time writing $42$ as the sum of a multiple of the previous remainder, $10$, and another remainder.
 
-$$\colorbox{aqua}{46} = \colorbox{orange}{10}(4) + \colorbox{lime}{6}$$
+$$\colorbox{Aquamarine}{46} = \colorbox{BurntOrange}{10}(4) + \colorbox{ForestGreen}{6}$$
 
 We repeat this process again until we obtain $0$ as a remainder.
 
 $$
 \begin{aligned}
-    \colorbox{orange}{10} &= \colorbox{lime}{6}(1) + \colorbox{pink}{4} \\
-    \colorbox{lime}{6} &= \colorbox{pink}{4}(2) + \colorbox{aquamarine}{2} \\
-    \colorbox{pink}{4} &= \colorbox{aquamarine}{2}(2) + 0 \\
+    \colorbox{BurntOrange}{10} &= \colorbox{ForestGreen}{6}(1) + \colorbox{Orchid}{4} \\
+    \colorbox{ForestGreen}{6} &= \colorbox{Orchid}{4}(2) + \colorbox{Aquamarine}{2} \\
+    \colorbox{Orchid}{4} &= \colorbox{Aquamarine}{2}(2) + 0 \\
 \end{aligned}
 $$
 
@@ -198,11 +198,11 @@ Note that this process is actually just running the Euclidean algorithm, it's ju
 
 $$
 \begin{aligned}
-    56 &= \colorbox{aqua}{46}(1) + \colorbox{orange}{10} \\
-    \colorbox{aqua}{46} &= \colorbox{orange}{10}(4) + \colorbox{lime}{6} \\
-    \colorbox{orange}{10} &= \colorbox{lime}{6}(1) + \colorbox{pink}{4} \\
-    \colorbox{lime}{6} &= \colorbox{pink}{4}(1) + \colorbox{aquamarine}{2} \\
-    \colorbox{pink}{4} &= \colorbox{aquamarine}{2}(2) + 0
+    56 &= \colorbox{Aquamarine}{46}(1) + \colorbox{BurntOrange}{10} \\
+    \colorbox{Aquamarine}{46} &= \colorbox{BurntOrange}{10}(4) + \colorbox{ForestGreen}{6} \\
+    \colorbox{BurntOrange}{10} &= \colorbox{ForestGreen}{6}(1) + \colorbox{Orchid}{4} \\
+    \colorbox{ForestGreen}{6} &= \colorbox{Orchid}{4}(1) + \colorbox{Aquamarine}{2} \\
+    \colorbox{Orchid}{4} &= \colorbox{Aquamarine}{2}(2) + 0
 \end{aligned}
 $$
 
@@ -210,10 +210,10 @@ To determine $x$ and $y$, we need to do a bit of rearranging to isolate the rema
 
 $$
 \begin{aligned}
-    \colorbox{orange}{56 - 46(1) = 10} \\
-    \colorbox{lime}{46 - 10(4) = 6} \\
-    \colorbox{pink}{10 - 6(1) = 4} \\
-    \colorbox{aquamarine}{6 - 4(1) = 2}
+    \colorbox{BurntOrange}{56 - 46(1) = 10} \\
+    \colorbox{ForestGreen}{46 - 10(4) = 6} \\
+    \colorbox{Orchid}{10 - 6(1) = 4} \\
+    \colorbox{Aquamarine}{6 - 4(1) = 2}
 \end{aligned}
 $$
 
@@ -222,27 +222,27 @@ $$46x + 56y = \gcd(46, 56) = 2$$
 
 To do so, we look at the last equation, which expresses $\gcd(46, 56)$ as a linear combination of $6$ and $4$, not the desired $46$ and $56$.
 
-$$6 - \colorbox{pink}{4}(1) = 2$$
+$$6 - \colorbox{Orchid}{4}(1) = 2$$
 
 However, the equation right above it is an expression for $4$.
 
-$$\colorbox{pink}{10 - 6(1) = 4}$$
+$$\colorbox{Orchid}{10 - 6(1) = 4}$$
 
 We can substitute this in to obtain the following:
 
-$$6 - \colorbox{pink}{(10 - 6(1))}(1) = 6 - 10(1) + 6(1) = \colorbox{lime}{6}(2) - 10(1) = 2$$
+$$6 - \colorbox{Orchid}{(10 - 6(1))}(1) = 6 - 10(1) + 6(1) = \colorbox{ForestGreen}{6}(2) - 10(1) = 2$$
 
 This expression now expresses $\gcd(46, 56)$ as a linear combination of $6$ and $10$. Once again, we can use the expression above it to substitute, this time for $6$.
 
-$$\colorbox{lime}{46 - 10(4) = 6}$$
+$$\colorbox{ForestGreen}{46 - 10(4) = 6}$$
 
-$$\colorbox{lime}{(46 - 10(4))}(2) - 10(1) = 2(46) - \colorbox{orange}{10}(9) = 2$$
+$$\colorbox{ForestGreen}{(46 - 10(4))}(2) - 10(1) = 2(46) - \colorbox{BurntOrange}{10}(9) = 2$$
 
 We can repeat this step one last time and obtain the following:
 
-$$\colorbox{orange}{56 - 46(1) = 10}$$
+$$\colorbox{BurntOrange}{56 - 46(1) = 10}$$
 
-$$46(2) - \colorbox{orange}{(56 - 46(1))}(9) = \boxed{46(11) - 56(9) = 2}$$
+$$46(2) - \colorbox{BurntOrange}{(56 - 46(1))}(9) = \boxed{46(11) - 56(9) = 2}$$
 
 From this, we can determine that $x = 11$ and $y = -9$!
 
@@ -252,11 +252,11 @@ Here all of the calculations sorted:
 
 $$
 \begin{aligned}
-    56 &= \colorbox{aqua}{46}(1) + \colorbox{orange}{10} \\
-    \colorbox{aqua}{46} &= \colorbox{orange}{10}(4) + \colorbox{lime}{6} \\
-    \colorbox{orange}{10} &= \colorbox{lime}{6}(1) + \colorbox{pink}{4} \\
-    \colorbox{lime}{6} &= \colorbox{pink}{4}(1) + \colorbox{aquamarine}{2} \\
-    \colorbox{pink}{4} &= \colorbox{aquamarine}{2}(2) + 0
+    56 &= \colorbox{Aquamarine}{46}(1) + \colorbox{BurntOrange}{10} \\
+    \colorbox{Aquamarine}{46} &= \colorbox{BurntOrange}{10}(4) + \colorbox{ForestGreen}{6} \\
+    \colorbox{BurntOrange}{10} &= \colorbox{ForestGreen}{6}(1) + \colorbox{Orchid}{4} \\
+    \colorbox{ForestGreen}{6} &= \colorbox{Orchid}{4}(1) + \colorbox{Aquamarine}{2} \\
+    \colorbox{Orchid}{4} &= \colorbox{Aquamarine}{2}(2) + 0
 \end{aligned}
 $$
 
@@ -264,10 +264,10 @@ $$
 
 $$
 \begin{aligned}
-    \colorbox{orange}{56 - 46(1) = 10} \\
-    \colorbox{lime}{46 - 10(4) = 6} \\
-    \colorbox{pink}{10 - 6(1) = 4} \\
-    \colorbox{aquamarine}{6 - 4(1) = 2}
+    \colorbox{BurntOrange}{56 - 46(1) = 10} \\
+    \colorbox{ForestGreen}{46 - 10(4) = 6} \\
+    \colorbox{Orchid}{10 - 6(1) = 4} \\
+    \colorbox{Aquamarine}{6 - 4(1) = 2}
 \end{aligned}
 $$
 
@@ -275,10 +275,10 @@ $$
 
 $$
 \begin{aligned}
-    6 - \colorbox{pink}{4}(1) = 2 \\
-    6 - \colorbox{pink}{(10 - 6(1))}(1) = \colorbox{lime}{6}(2) - 10(1) = 2 \\
-    \colorbox{lime}{(46 - 10(4))}(2) - 10(1) = 2(46) - \colorbox{orange}{10}(9) = 2 \\
-    46(2) - \colorbox{orange}{(56 - 46(1))}(9) = \boxed{46(11) - 56(9) = 2}
+    6 - \colorbox{Orchid}{4}(1) = 2 \\
+    6 - \colorbox{Orchid}{(10 - 6(1))}(1) = \colorbox{ForestGreen}{6}(2) - 10(1) = 2 \\
+    \colorbox{ForestGreen}{(46 - 10(4))}(2) - 10(1) = 2(46) - \colorbox{BurntOrange}{10}(9) = 2 \\
+    46(2) - \colorbox{BurntOrange}{(56 - 46(1))}(9) = \boxed{46(11) - 56(9) = 2}
 \end{aligned}
 $$
 

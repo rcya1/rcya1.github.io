@@ -26,12 +26,16 @@ In this document, we will denote the "smallest" $n$th root of unity as the $n$th
 <blockquote class="blockquote-theorem">
 <hr>
 If $\omega$ is the smallest $n$th root of unity, then all of the powers of $\omega$ are also roots of unity.
+
 $$\omega^1, \omega^2, ..., \omega^{n}$$
 </blockquote>
 
 This can be proven as follows:
+
 $$z^n = 1$$
+
 $$\omega^n = 1$$
+
 $$(\omega^i)^n = (\omega^n)^i = 1^i = 1$$
 
 In fact, all of the $n$th roots of unity can be written as the first $n$ powers of the smallest $n$th root of unity.
@@ -41,14 +45,20 @@ Note that with this method, we do not obtain more than $n$ roots of unity becaus
 ## Polynomial Interpretation
 
 As we stated before, we can consider the $n$th roots of unity as the roots of the polynomial
+
 $$x^n - 1$$
 
 However, we can also write a polynomial in terms of its factors, which means that we can write the polynomial $x^n - 1$ as the following:
+
 $$x^n - 1 = (x - \omega)(x - \omega^2)...(x - \omega^n) = (x - 1)(x - \omega)...(x - \omega^{n - 1})$$
 
 This interpretation can be pretty useful in a few problems, as we will see in an example later.
 
-A more important aspect of this interpretation is the following result. Note that we can actually factor the equation $x^n - 1 = 0$ as $(x - 1)(1 + x + x^2 + ... + x^{n - 1}) = 0$. Try multiplying out the factorization to see why. If we divide both sides by $x - 1$ we obtain the following theorem:
+A more important aspect of this interpretation is the following result. Note that we can actually factor the equation $x^n - 1 = 0$ as:
+
+$$(x - 1)(1 + x + x^2 + ... + x^{n - 1}) = 0$$
+
+Try multiplying out the factorization to see why. If we divide both sides by $x - 1$ we obtain the following theorem:
 
 <blockquote class="blockquote-theorem">
 <hr>
