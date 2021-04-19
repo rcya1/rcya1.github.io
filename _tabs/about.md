@@ -21,7 +21,7 @@ A machine learning based data analysis platform for satellite ocean color sensor
 
 ## High School
 
-During high school, I participated in our school's math league, FIRST robotics team, and science olympiad team.
+During high school, I participated in our school's math league, FIRST robotics team, and Science Olympiad team. Outside of school, I also participated in the USA Computing Olympiad.
 
 ### Math League
 
@@ -31,6 +31,10 @@ During high school, I participated in our school's math league, FIRST robotics t
 - ARML Local 2020 - Tied for 13th place individually
 - Helped write problems and solutions for the Hallow’s Eve Online Math Tournament (HEOMT)
   - Sponsored by companeis such as Wolfram, Jane Street, 1Password, and Maplesoft to offer over $1000 in prizes to ~100 participants
+
+### USA Computing Olympiad
+
+- Platinum division contestant
 
 ### FRC Robotics
 
