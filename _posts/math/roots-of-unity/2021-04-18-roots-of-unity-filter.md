@@ -173,7 +173,7 @@ However, by using the crucial property that $\omega^n = 1$, we can adjust the co
 | $\omega^2$ | $\omega$ | $\omega$ | $1$ | $\omega^2$ |   |
 | **Total Sum** | | **$0$** | **$3$** | **$0$** | |
 
-With these coefficients carefully, each sum now conveniently produces the values for $a_1$!
+With these coefficients chosen carefully, each sum now conveniently produces the values for $a_1$!
 
 <blockquote class="blockquote-note">
 <hr>
