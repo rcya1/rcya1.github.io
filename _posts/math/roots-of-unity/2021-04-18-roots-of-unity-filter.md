@@ -181,6 +181,7 @@ I currently don't have a good explanation for why all of the other columns conve
 </blockquote>
 
 With this, our equation to find the sum of every 3rd term with an offset of $1$ looks like the following:
+
 $$\dfrac{P(1) + \omega^2 P(\omega) + \omega P(\omega^2)}{3}$$
 
 ## Solving the Guiding Problem
