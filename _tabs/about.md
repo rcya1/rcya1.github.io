@@ -30,7 +30,7 @@ During high school, I participated in our school's math league, FIRST robotics t
 - ARML 2019 - 3rd place in B division (member of Central Jersey B1 team)
 - ARML Local 2020 - Tied for 13th place individually
 - Helped write problems and solutions for the Hallow’s Eve Online Math Tournament (HEOMT)
-  - Sponsored by companeis such as Wolfram, Jane Street, 1Password, and Maplesoft to offer over $1000 in prizes to ~100 participants
+  - Sponsored by companies such as Wolfram, Jane Street, 1Password, and Maplesoft to offer over $1000 in prizes to ~100 participants
 
 ### USA Computing Olympiad
 
