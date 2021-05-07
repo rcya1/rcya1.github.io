@@ -5,7 +5,7 @@ tags: [math, article, recurrences]
 math: true
 ---
 
-In this article, we'll discuss how to solve both homogenous and non-homogenous linear recurrences with constant coefficients. First, let's review a few definitions to see what all of these terms mean.
+In this article, we'll discuss how to solve both homogenous and non-homogenous linear recurrences with constant coefficients. If you already know what linear recurrences are and all of the vocabulary surrounding them, feel free to just skip to the next section to see how to solve homogenous and non-homogenous linear recurrences. If you're unfamilar with some of these terms, the first section goes over the basic definitions regarding linear recurrences.
 
 ## Definitions
 
@@ -86,7 +86,7 @@ with $c_1, c_2, ..., c_k \in \mathbb{Z}$ and $c_k \neq 0$.
 
 </blockquote>
 
-### Homogenous vs Non-homogenous
+### Homogenous vs Non-Homogenous
 
 There are two primary types of linear recurrences: homogenous and non-homogenous.
 
@@ -109,7 +109,7 @@ $$
 
 Note that we can actually separate non-homogenous recurrence relations into two parts: a homogenous part and then some polynomial $f(n)$. This will be key to solving the relation later.
 
-## Solving Linear Recurrences
+### What It Means to "Solve" a Linear Recurrence 
 
 First, we have to clarify what it even means to "solve" a linear recurrence. After all, if we're given enough initial values and the recurrence relation, we can solve for any value of the sequence through just plug and chug. However, this can be extremely slow for huge values of $n$, making an explicit formula very desirable. The idea of "solving" a recurrence relation is to find some function such as $a_n = 4^n$ that we can plug a huge value of $n$ into directly to find the value of $a_n$. This function is known as the **closed-form** expression for $a_n$.
 
@@ -117,13 +117,205 @@ For instance, the Fibonacci numbers have the following closed-form expression kn
 
 $$F_n = \frac{1}{\sqrt{5}}\left(\left(\frac{1 + \sqrt{5}}{2}\right)^n - (\left(\frac{1-\sqrt{5}}{2}\right)^n\right)$$
 
+To calculate any value of $F_n$, we can just plug $n$ into this formula rather than have to compute all values of $F_n$ up to the desired $n$. To show how this works, let's try to calculate $F_10$. From just applying the recurrence relation of the Fibonacci sequence, we get:
+
+$$
+\begin{align*}
+F_2 &= F_0 + F_1 = 0 + 1 = 1 \\
+F_3 &= F_1 + F_2 = 1 + 1 = 2 \\
+F_4 &= F_2 + F_3 = 1 + 2 = 3 \\
+F_5 &= F_3 + F_4 = 2 + 3 = 5 \\
+F_6 &= F_4 + F_5 = 3 + 5 = 8 \\
+F_7 &= F_5 + F_6 = 5 + 8 = 13 \\
+F_8 &= F_6 + F_7 = 8 + 13 = 21 \\
+F_9 &= F_7 + F_8 = 13 + 21 = 34 \\
+F_10 &= F_8 + F_9 = 21 + 34 = 55 \\
+\end{align*}
+$$
+
+On the other hand, we can use Binet's formula to calculate the value for us directly without having to go through $F_2$ through $F_9$. Unfortunately, Binet's formula is not very friendly since it has this nasty binomial power that will require just as much work, if not more, to expand. If you do the expansion with the binomial theorem, many of the terms will actually cancel out between the two binomials, but it still isn't a fun time.
+
+The best way to do this would probably be to just use decimals and a calculator, which can show that this formula does in fact work:
+
+$$F_10 = \frac{1}{\sqrt{5}}\left(\left(\frac{1 + \sqrt{5}}{2}\right)^10 - (\left(\frac{1-\sqrt{5}}{2}\right)^10\right)$$
+$$F_10 = \frac{122.991869381 - 0.00813061875}{2.2360679775} = 55$$
+
+As a result, the Fibonacci sequence is typically not the best example for displaying the utility of having a closed form expression. Instead, let's take a look at a different recurrence relation:
+
+$$
+\begin{align*}
+a_n &= 6a_{n-1} - 9a_{n-2} \\
+a_0 &= 1 \\
+a_1 &= 4
+\end{align*}
+$$
+
+The closed form for this recurrence relation can be found to be:
+
+$$a_n = 3^n + n3^{n-1}$$
+
+Therefore, let's say we wanted to calculate $a_100$. Rather than plug and chug through all $100$ values of $a_n$, we can instead just plug in and quickly learn that $a_100 = 3^{100} + 100 * 3^{99}$. In this case, the simple closed form expression is much simpler and faster than bashing through the values of $a_n$.
+
+In the next two sections, we'll talk about how to derive these closed form expressions for any linear recurrence. We'll first discuss homogenous recurrences since solving them is much simpler and more systematic than solving non-homogenous recurrences.
+
+## Solving Homogenous Recurrences
+
+As a recap of what it means for a linear recurrence to be homogenous, a homogenous linear recurrence does not contain any terms besides $a_n$ in its recurrence relation. In particular, this means that there can be no constant coefficients or any terms that involve $n$ directly inside of the recurrence relation. See [Homogenous vs Non-Homogenous](#Homogenous-vs-Non-Homogenous) for more details.
+
+To solve these recurrences, we'll first construct something known as the characteristic polynomial and characteristic equation of the recurrence relation.
+
+<blockquote class="blockquote-definition">
+<hr>
+The <b>characteristic polynomial</b> of the degree $k$ recurrence relation
+
+$$a_n = c_1a_{n-1} + c_2a_{n-2} + ... c_ka_{n-k}$$
+
+is denoted as
+
+$$x^k - c_1x^{k-1} - c_2x^{k-2} - ... - c_{k-1}x - c_k$$
+
+When we set this to zero, we get the <b>characteristic equation</b> of the recurrence relation. The solutions to this equation are known as the <b>characteristic roots</b>.
+
+</blockquote>
+
+To find the solution to our recurrence relation, we need to find the characteristic roots of it. Once we find the characteristic roots, there are two cases: either all of them are distinct or there are some duplicates. Let's first handle the case where all of them are distinct.
+
+In the case where they are all distinct, let's call our characteristic roots $r_1, r_2, ..., r_k$. Our solution to the linear recurrence is then of the form:
+
+$$a_n = \alpha_1 r_1^n + \alpha_2 r_2^n + ... + \alpha_k r_k^n$$
+
+The next thing we need to do is just solve for our values of $\alpha$, which we can do by plugging in the initial conditions. See the [Homogenous Recurrence Examples](#Homogenous-Recurrence-Examples) section below to see an example of this.
+
+Next, let's consider the roots are not distinct. How many times a root appears as a solution to a polynomial is known as its multiplicity. For instance, the equation $(x-3)^2(x-2)$ has $2$ distinct roots. $2$ is a root with multiplicity $1$ while $3$ is a root with multiplicity $2$. Therefore, the idea of having non-distinct roots means that there are some characteristic roots with multiplicity greater than $1$.
+
+Let's denote the multiplicity of the characteristic root $r_i$ by $m_i$, and let's say that we have $x$ distinct roots. Then, our solution has the following form instead:
+
+$$a_n = \sum_{i=0}^{x}\sum_{j=0}^{m_i}\alpha_{i,j}n^jr_i^n$$
+
+Once again, we can just plug in the initial conditions to find our values of $\alpha$. This form is pretty hard to understand from the formula, so see the example in the [Homogenous Recurrence Examples](#Homogenous-Recurrence-Examples) section below. What it does is basically just adds another exponential for each copy of the characteristic root but with an extra $n$ factor tacked onto it.
+
+### Homogenous Recurrence Examples
+
+<blockquote class="blockquote-example">
+<hr>
+Solve the following recurrence equation:
+
+$$
+\begin{align*}
+a_n &= 5a_{n-1} - 6a_{n-2} \\
+a_0 &= 2 \\
+a_1 &= 3
+\end{align*}
+$$
+
+</blockquote>
+
+Let's first write the characteristic equation:
+
+$$x^2 - 5x + 6 = 0$$
+
+We can solve this by factoring to get $x = 2, 3$. All of our roots are distinct, so we can use the following form:
+
+$$a_n = \alpha_1 r_1^n + \alpha_2 r_2^n + ... + \alpha_k r_k^n$$
+
+$$a_n = \alpha_1 2^n + \alpha_2 3^n$$
+
+From here, we can plug in our initial conditions of $a_0 = 2, a_1 = 3$. This gives us the following system of equations that we can use to solve for $\alpha_1$ and $\alpha_2$.
+
+$$
+\begin{align*}
+a_0 = 2 = \alpha_1 * 2^0 + \alpha_2 * 3^0 \\
+a_1 = 3 = \alpha_1 * 2^1 + \alpha_2 * 3^1
+\end{align*}
+$$
+
+Solving, we get $\alpha_1 = 3, \alpha_2 = -1$. Therefore, the final solution to this recurrence equation is:
+
+$$\boxed{a_n = 3 * 2^n - 3^n}$$
+
+Try plugging in some values to verify this! Now, let's move on to an example that will have repeated roots.
+
+<blockquote class="blockquote-example">
+<hr>
+Solve the following recurrence equation:
+
+$$
+\begin{align*}
+a_n &= 14a_{n-1} - 72a_{n-2} + 160a_{n-3} - 128a_{n-4} \\
+a_0 &= 2 \\
+a_1 &= 3 \\
+a_2 &= 5 \\
+a_3 &= 9
+\end{align*}
+$$
+
+</blockquote>
+
+We can set up our characteristic equation:
+
+$$x^4 - 14 x^3 + 72 x^2 - 160 x + 128 = 0$$
+
+We can factor this to get the following, which shows that we have repeated roots:
+
+$$(x-4)^3(x-2) = 0$$
+
+Therefore, we have the characteristic root $4$ with multiplicity $3$ and the characteristic root $2$ with multiplicity $1$. We can then plug this into the form mentioned above:
+
+$$a_n = \sum_{i=0}^{x}\sum_{j=0}^{m_i}\alpha_{i,j}n^jr_i^n$$
+
+$$a_n = \alpha_{1,1} 4^n + \alpha_{1,2} n4^n + \alpha_{1,3} n^2 4^n + \alpha_{2,1} 2^n$$
+
+We can then plug in our four initial conditions to solve this recurrence:
+
+$$
+\begin{align*}
+a_0 = 2 = \alpha_{1,1} * 4^0 + \alpha_{1,2} * 0 * 4^0 + \alpha_{1,3} * 0^2 * 4^0 + \alpha_{2,1} 2^0 \\
+a_1 = 3 = \alpha_{1,1} * 4^1 + \alpha_{1,2} * 1 * 4^1 + \alpha_{1,3} * 1^2 * 4^1 + \alpha_{2,1} 2^1 \\
+a_2 = 5 = \alpha_{1,1} * 4^2 + \alpha_{1,2} * 2 * 4^2 + \alpha_{1,3} * 2^2 * 4^2 + \alpha_{2,1} 2^2 \\
+a_3 = 9 = \alpha_{1,1} * 4^3 + \alpha_{1,2} * 3 * 4^3 + \alpha_{1,3} * 3^2 * 4^3 + \alpha_{2,1} 2^3
+\end{align*}
+$$
+
+This gives us the following system of equations:
+
+$$
+\begin{align*}
+2 &= \alpha_{1, 1} + \alpha_{2, 1} \\
+3 &= 4\alpha_{1, 1} + 4\alpha_{1, 2} + 4\alpha_{1, 3} + 2\alpha_{2, 1} \\
+5 &= 16\alpha_{1, 1} + 32\alpha_{1, 2} + 64\alpha_{1, 3} + 4\alpha_{2, 1} \\
+9 &= 64\alpha_{1, 1} + 192\alpha_{1, 2} + 576 \alpha_{1, 3} + 8\alpha_{2, 1}
+\end{align*}
+$$
+
+Solving this system, we get
+
+$$\alpha_{1,1} = -\frac{19}{8}, \alpha_{1,2} = \frac{69}{64}, \alpha_{1,3} = -\frac{9}{64}, \alpha_{2,1} = \frac{35}{8}$$
+
+Therefore, our final answer is:
+
+$$\boxed{a_n = -\frac{19}{8} 4^n + \frac{69}{64} n4^n -\frac{9}{64} n^2 4^n + \frac{35}{8} 2^n}$$
+
+## Non-Homogenous Recurrence
+
+While there was a systematic way to approach homogenous recurrences, solving non-homogenous recurrences requires more guessing. First, note that we can express any non-homogenous linear recurrence $a_n$ as the sum of a homogenous linear recurrence $b_n$ and a polynomial $f(n)$.
+
+The first step of the procedure is to solve for the general form of $b_n$. That is, find the characteristic roots of $b_n$ but don't find the values of $\alpha$. Next, we need to do some guessing and checking to find an equation for $a_n$ that works in the relation given. When we're looking for this, we do **not** need to have this equation satisfy the initial conditions.
+
+After we find this equation for $a_n$, we can then add on our solution to $b_n$. After this, we can solve for those values of $\alpha$ to make this combined equation match our initial conditions.
+
+When searching for equation forms that will satisfy the relation for $a_n$, it is mostly guess and check. However, we can use a few tips to guide our searching. Most of the time, the correct relation will be very similar in form to $f(n)$. For instance, if $f(n)$ is a polynomial, we should try out polynomials of the same degree. If $f(n)$ is an exponential like $d^n$, then we can try multiples of $d^n$ and also throw in some multiples of $nd^n, n^2d^n$, etc. In the sections below, we will go over some examples to show you how this process works since just describing it is difficult.
+
+### Non-Homogenous Recurrence Examples
+
+
+
+## Why It Works
+
+While the above goes over how to solve these recurrences, a lot of it just seems like magic formulas. In the below sections, I will try to explain *why* these equations work and how you can reason through them to the best of my ability, although the proofs may not be perfect.
+
 ### Homogenous Recurrences
 
-
-
-### Non-homogenous Recurrences
-
-
+### Non-Homogenous Recurrences
 
 ## Dealing with Complex Numbers (Maybe?)
 
