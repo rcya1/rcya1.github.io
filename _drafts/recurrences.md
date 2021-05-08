@@ -303,17 +303,190 @@ The first step of the procedure is to solve for the general form of $b_n$. That 
 
 After we find this equation for $a_n$, we can then add on our solution to $b_n$. After this, we can solve for those values of $\alpha$ to make this combined equation match our initial conditions.
 
-When searching for equation forms that will satisfy the relation for $a_n$, it is mostly guess and check. However, we can use a few tips to guide our searching. Most of the time, the correct relation will be very similar in form to $f(n)$. For instance, if $f(n)$ is a polynomial, we should try out polynomials of the same degree. If $f(n)$ is an exponential like $d^n$, then we can try multiples of $d^n$ and also throw in some multiples of $nd^n, n^2d^n$, etc. In the sections below, we will go over some examples to show you how this process works since just describing it is difficult.
+When searching for equation forms that will satisfy the relation for $a_n$, it is mostly guess and check. However, we can use a few tips to guide our searching. Most of the time, the correct relation will be very similar in form to $f(n)$. For instance, if $f(n)$ is a polynomial, we should try out polynomials of similar same degree. If $f(n)$ is an exponential like $d^n$, then we can try multiples of $d^n$ and also throw in some multiples of $nd^n, n^2d^n$, etc. In the sections below, we will go over some examples to show you how this process works since just describing it is difficult.
 
-### Non-Homogenous Recurrence Examples
+### Non-Homogenous Recurrence Example
 
+<blockquote class="blockquote-example">
+<hr>
+Solve the following recurrence equation:
 
+$$
+\begin{align*}
+a_n &= 3a_{n-1} - 2a_{n-2} + 3n + 4 \\
+a_0 &= 1 \\
+a_1 &= 2 \\
+\end{align*}
+$$
+
+</blockquote>
+
+The first step of the process is to isolate the homogenous linear recurrence from this equation. We can separate $a_n$ into a homogenous $b_n$ and a polynomial $f(n)$.
+
+$$
+\begin{align*}
+a_n &= 3a_{n-1} - 2a_{n-2} + 3n + 4 \\
+b_n &= 3a_{n-1} - 2a_{n-2} \\
+f(n) &= 3n + 4 \\
+\end{align*}
+$$
+
+To solve $b_n$, we can once apply the exact same method as in the previous step: find the characteristic roots and then write the general form of the recurrence. This gives us the following:
+
+$$(x-2)(x-1) = 0$$
+
+Therefore, our solution to $b_n$ will be of the form:
+
+$$b_n = \alpha_1 2^n + \alpha_2 1^n = \alpha_1 2^n + \alpha_2$$
+
+Now that we have solved the homogenous version of the problem, we can move on to guessing and checking for solutions to our non-homogenous $a_n$. First, note that $f(n)$ is a linear polynomial, so we may guess that a solution $a_n$ might also be a linear polynomial. Let's try this and do:
+
+$$a_n = ax + b$$
+
+Now, what we want to do is substitute this expression into our recurrence relation to solve for the coefficients $a$ and $b$ that make this form work. These coefficients for $a$ and $b$ must satisfy the recurrence relation for all integer values of $n$. Let's first do a bit of plugging in and rearranging:
+
+$$
+\begin{align*}
+a_n &= 3a_{n-1} - 2a_{n-2} + 3n + 4 \\
+an + b &= 3(a(n-1) + b) - 2(a(n-2) + b) + 3n + 4 \\
+an + b &= 3an - 3a + 3b - 2an + 4a - 2b + 3n + 4 \\
+0 &= a + 3n + 4 \\
+\end{align*}
+$$
+
+Uh oh, we have a problem here. There is no constant value we can give to $a$ such that it will satisfy this equation for all $n$. As a result, we can conclude that the recurrence relation for $a_n$ does not have a linear solution. Let's try a quadratic instead:
+
+$$a_n = ax^2 + bx + c$$
+
+We can then do the exact same as before, although it will get a bit messy due to the quadratic:
+
+$$
+\begin{align*}
+a_n &= 3a_{n-1} - 2a_{n-2} + 3n + 4 \\
+an^2 + bn + c &= 3(a(n-1)^2 + b(n-1) + c) - 2(a(n-2)^2 + b(n-2) + c) + 3n + 4 \\
+an^2 + bn + c &= 3(a(n^2 - 2n + 1) + b(n-1) + c) - 2(a(n^2-4n + 4) + b(n-2) + c) + 3n + 4 \\
+an^2 + bn + c &= 3an^2 - 6an + 3a + 3bn - 3b + 3c - 2an^2 + 8an - 8a - 2bn + 4b - 2c + 3n + 4 \\
+0 &= 2an - 5a + b + 3n + 4 \\
+\end{align*}
+$$
+
+Now that we've simplified our equation greatly, this looks much more promising! Note that $c$ disappeared in our equation, which means that we can make $c$ anything. For simplicity, we'll just take $c = 0$. To solve for values of $a$ and $b$ for all values of $n$, we have a few options: the first is to just simply plug in a bunch of values of $n$ and then solve for $a$ and $b$ from there. However, a more rigorous solution would be to gather terms to form a polynomial in terms of $n$. Then, all of the coefficients in this polynomial must be $0$ for this to be a valid solution. If this isn't possible, then this form is also invalid.
+
+$$
+\begin{align*}
+0 &= (2a+3)n - 5a + b + 4 \\
+0 &= 2a + 3
+a &= -\frac{3}{2}
+0 &= -5a + b + 4
+b &= -\frac{23}{2}
+\end{align*}
+$$
+
+Therefore, our solution to $a_n$ is:
+
+$$a_n = -\frac{3}{2}n^2 - \frac{23}{2}n$$
+
+If you plug this into the recurrence relation, this will satisfy that relationship! However, we have a major issue here: it doesn't satisfy any of our initial conditions! This is where our previous solution for $b_n$ comes into play. What we can do is add together these solutions to create a complete solution for $a_n$ that also has values for $\alpha$ that we can solve for to make sure it aligns with our specific solution.
+
+$$
+\begin{align*}
+a_n &= -\frac{3}{2}n^2 - \frac{23}{2}n + \alpha_1 2^n + \alpha_2 \\
+a_0 &= 1 = -\frac{3}{2} * 0^2 - \frac{23}{2} * 0 + \alpha_1 2^0 + \alpha_2 \\
+a_1 &= 2 = -\frac{3}{2}* 1^2 - \frac{23}{2} * 1 + \alpha_1 2^1 + \alpha_2 \\
+1 &= \alpha_1 + \alpha_2 \\
+2 &= -\frac{3}{2} - \frac{23}{2} + 2\alpha_1 + \alpha_2 \\
+15 &= 2\alpha_1 + \alpha_2 \\
+\alpha_1 &= 14 \\
+\alpha_2 &= -13
+\end{align*}
+$$
+
+Therefore, we finally have our full solution:
+
+$$a_n = -\frac{3}{2}n^2 - \frac{23}{2}n + 14 * 2^n - 13$$
 
 ## Why It Works
 
 While the above goes over how to solve these recurrences, a lot of it just seems like magic formulas. In the below sections, I will try to explain *why* these equations work and how you can reason through them to the best of my ability, although the proofs may not be perfect.
 
 ### Homogenous Recurrences
+There are two key theorems that we will use while solving homogenous linear recurrence relation:
+
+<blockquote class="blockquote-theorem">
+<hr>
+
+If $a_n$ and $b_n$ are solutions to a recurrence relation, then their sum $a_n + b_n$ also satisfies that recurrence relation.
+</blockquote>
+
+To prove this, we can simply apply the recurrence relation definition a few times and do a bit of grouping.
+
+$$
+\begin{align*}
+a_n = c_1a_{n-1} + c_2a_{n-2} + ... + c_ka_{n-k} \\
+b_n = c_1b_{n-1} + c_2b_{n-2} + ... + c_kb_{n-k} \\
+a_n + b_n = c_1(a_{n-1} + b_{n-1}) + c_2(a_{n-2} + b_{n-2}) + ... + c_k(a_{n-k} + b_{n-k}) \\
+d_n &= a_n + b_n = c_1d_{n-1} + c_2d_{n-2} + ... + c_kd_{n-k}
+\end{align*}
+$$
+
+<blockquote class="blockquote-theorem">
+<hr>
+
+If $a_n$ is a solution to a recurrence relation, then $\alpha a_n$ also satisfies that recurrence relation for any constant $\alpha$.
+</blockquote>
+
+To prove this, we can simply apply the recurrence relation definition.
+
+$$
+\begin{align*}
+a_n &= c_1a_{n-1} + c_2a_{n-2} + ... + c_ka_{n-k} \\
+\alpha a_n &= c_1 \alpha a_{n-1} + c_2 \alpha a_{n-2} + ... + c_k \alpha a_{n-k} \\
+d_n &= \alpha a_n = c_1d_{n-1} + c_2d_{n-2} + ... + c_k d_{n-k}
+\end{align*}
+$$
+
+Now that we have this, we can construct an approach to our problem. If we have a recurrence relation of degree $k$, then there will be $k$ initial values that we need to satisfy. Therefore, what we can do is find $k$ different sequences that satisfy our recurrence relation. We can add together these $k$ different sequences to get another sequence that will still satisfy this recurrence relation. If we take each of those $k$ different sequences and we multiply each one by some multipler $\alpha_k$, our recurrence relation will also have $k$ different parameters that we can use to completely modify the value of our sequence. Therefore, we can use this to make our sequence match the initial values of our recurrence sequence.
+
+Now, that we have an approach, we can start finding small solutions that will fit into this recurrence equation.
+
+<blockquote class="blockquote-theorem">
+<hr>
+
+If $a_n$ has the characteristic polynomial 
+
+$$x^k - c_1x^{k-1} - c_2x^{k-2} - ... - c_{k-1}x - c_k$$
+
+then $r^n$ is a solution to the recurrence equation if $r$ is a root of the characteristic polynomial.
+
+</blockquote>
+
+To prove this, we can plug $r$ into the characteristic polynomial and do a bit of rearranging:
+
+$$
+\begin{align*}
+0 &= r^k - c_1r^{k-1} + c_2r^{k-2} + ... + c_k \\
+r^k &= c_1r^{k-1} + c_2r^{k-2} + ... + c_k \\
+r^k * r^{n-k} &= (c_1r^{k-1} + c_2r^{k-2} + ... + c_k) * r^{n-k} \\
+r^n &= c_1r^{n-1} + c_2r^{n-2} + ... + c_kr^{n-k}
+\end{align*}
+$$
+
+Since the last line matches the form of our recurrence relation, we can conclude that $r^n$ is a solution to our recurrence relation.
+
+From here, we already have our solution for when the roots of our characteristic equation are distinct. Each distinct root $r_i$ will give us a distinct solution $r_i^n$ that we can then apply our above method to.
+
+However, this doesn't work when the roots for our characteristic equation are not distinct, as we will then not get $k$ different sequences we can combine. However, when a root $r_i$ has a multiplicity $m_i > 1$, then we can construct another solution:
+
+<blockquote class="blockquote-theorem">
+<hr>
+
+If $r$ is a solution to the characteristic polynomial of $a_n$ with a multiplicity of $m$, then $n^{i}r^n$ for any integer $i$ between $0$ and $m-1$ is a solution to the recurrence equation.
+
+</blockquote>
+
+Proving this is pretty complicated, so I'll omit it here. If you're interested int he full details, check out page 16 of [this document](https://www.eecs.yorku.ca/course_archive/2007-08/F/1019/A/recurrence.pdf) that also includes a ton of awesome in-depth information about solving recurrences.
+
+Once we have this theorem, we can then see that for each root $r$ with multiplicity $m$, we get $m$ sequences out of it. Since the total sum of all multiplicities is equal to $k$, we obtain our $k$ sequences that we can then create a linear combination of to match our initial conditions. With that, we have created a systematic approach towards solving linear recurrences.
 
 ### Non-Homogenous Recurrences
 
