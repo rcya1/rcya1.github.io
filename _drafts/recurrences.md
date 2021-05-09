@@ -490,7 +490,42 @@ Once we have this theorem, we can then see that for each root $r$ with multiplic
 
 ### Non-Homogenous Recurrences
 
-## Dealing with Complex Numbers (Maybe?)
+With non-homogenous recurrences, the previous method does **not** apply because recurrences are not additive and the two forms we found also don't work. As a result, we have to do a bit more work to find an answer. The key is the following:
+
+<blockquote class="blockquote-theorem">
+<hr>
+
+If $a_n$ be a linear non-homogenous recurrence relation. Write $a_n$ in the following form, where $b_n$ is a linear homogenous recurrence relation and $f(n)$ is a polynomial in terms of $n$.
+
+$$a_n = b_n + f(n)$$
+
+If we know any particular solution $a_n$ that satisfies the given non-homogenous recurrence relation and we know a solution $b_n$ that satisfies the homogenous recurrence relation, then
+
+$$d_n = a_n + b_n$$
+
+also satisfies the non-homogenous recurrence relation.
+
+</blockquote>
+
+To prove this, let us write out the definitions of our sequences and do a bit of rearranging:
+
+$$
+\begin{align*}
+a_n &= c_1a_{n-1} + c_2a_{n-2} + ... + c_ka_{n-k} + f(n) \\
+b_n &= c_1b_{n-1} + c_2b_{n-2} + ... + c_kb_{n-k} \\
+d_n &= a_n + b_n \\
+d_n &= c_1(a_{n-1} + b_{n-1}) + c_2(a_{n-2} + b_{n-2}) + ... + c_k(a_{n-k} + b_{n-k}) + f(n) \\
+d_n &= c_1d_{n-1} + c_2d_{n-2} + ... + c_kd_{n-k} + f(n)
+\end{align*}
+$$
+
+Now that we have this tool, we can design an approach to solving this non-homogenous linear recurrence. We need to first design a single solution to the linear recurrence that will satisfy it. This must be done through guess and check and once we find it, it will not necessarily satisfy our initial conditions. However, we can use this as a building block and use the above theorem to add the homogenous solution to it. This homogenous solution will be fully customizable and allow our recurrence to pass through whichever $k$ values we want. As a result, we can use it to drive our non-homogenous solution towards our desired inputs.
+
+Finding the specific non-homogenous solution is hard though. Fortunately, as mentioned before, just trying forms similar to $f(n)$ has been shown to work really well. In fact, there is a proof (which will be omitted here for brevity) that if $f(n)$ is a polynomial, then there will always be a polynomial that satisfies the recurrence relation of $a_n$.
+
+## Conclusion
+
+Solving linear recurrences can be very hard at times, but it can also be extremely powerful for solving some math problems. Not only can it greatly shorten calculations, but it can also put your answers into forms you may not have seen otherwise. For instance, if you have the closed form $a_n = 3^n - 2^n$, you can calculate your answer in a really nice way and see that it is the difference of two exponentials. If you bashed out the values of $a_n$ instead and got something like $a_10 = 58025$, it would be really hard to see this connection.
 
 ## Sources
 
