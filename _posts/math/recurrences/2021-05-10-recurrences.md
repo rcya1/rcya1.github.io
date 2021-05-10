@@ -1,5 +1,6 @@
 ---
 title: Solving Linear Recurrences
+date: 2021-05-10 17:30:00 -0400
 categories: [Math Articles]
 tags: [math, article, recurrences]
 math: true
@@ -115,7 +116,7 @@ First, we have to clarify what it even means to "solve" a linear recurrence. Aft
 
 For instance, the Fibonacci numbers have the following closed-form expression known as **Binet's Formula**:
 
-$$F_n = \frac{1}{\sqrt{5}}\left(\left(\frac{1 + \sqrt{5}}{2}\right)^n - (\left(\frac{1-\sqrt{5}}{2}\right)^n\right)$$
+$$F_n = \frac{1}{\sqrt{5}}\left(\left(\frac{1 + \sqrt{5}}{2}\right)^n - \left(\frac{1-\sqrt{5}}{2}\right)^n\right)$$
 
 To calculate any value of $F_n$, we can just plug $n$ into this formula rather than have to compute all values of $F_n$ up to the desired $n$. To show how this works, let's try to calculate $F_10$. From just applying the recurrence relation of the Fibonacci sequence, we get:
 
@@ -129,7 +130,7 @@ F_6 &= F_4 + F_5 = 3 + 5 = 8 \\
 F_7 &= F_5 + F_6 = 5 + 8 = 13 \\
 F_8 &= F_6 + F_7 = 8 + 13 = 21 \\
 F_9 &= F_7 + F_8 = 13 + 21 = 34 \\
-F_10 &= F_8 + F_9 = 21 + 34 = 55 \\
+F_{10} &= F_8 + F_9 = 21 + 34 = 55 \\
 \end{align*}
 $$
 
@@ -137,8 +138,9 @@ On the other hand, we can use Binet's formula to calculate the value for us dire
 
 The best way to do this would probably be to just use decimals and a calculator, which can show that this formula does in fact work:
 
-$$F_10 = \frac{1}{\sqrt{5}}\left(\left(\frac{1 + \sqrt{5}}{2}\right)^10 - (\left(\frac{1-\sqrt{5}}{2}\right)^10\right)$$
-$$F_10 = \frac{122.991869381 - 0.00813061875}{2.2360679775} = 55$$
+$$F_{10} = \frac{1}{\sqrt{5}}\left(\left(\frac{1 + \sqrt{5}}{2}\right)^{10} - \left(\frac{1-\sqrt{5}}{2}\right)^{10}\right)$$
+
+$$F_{10} = \frac{122.991869381 - 0.00813061875}{2.2360679775} = 55$$
 
 As a result, the Fibonacci sequence is typically not the best example for displaying the utility of having a closed form expression. Instead, let's take a look at a different recurrence relation:
 
@@ -154,13 +156,13 @@ The closed form for this recurrence relation can be found to be:
 
 $$a_n = 3^n + n3^{n-1}$$
 
-Therefore, let's say we wanted to calculate $a_100$. Rather than plug and chug through all $100$ values of $a_n$, we can instead just plug in and quickly learn that $a_100 = 3^{100} + 100 * 3^{99}$. In this case, the simple closed form expression is much simpler and faster than bashing through the values of $a_n$.
+Therefore, let's say we wanted to calculate $a_{100}$. Rather than plug and chug through all $100$ values of $a_n$, we can instead just plug in and quickly learn that $a_{100} = 3^{100} + 100 * 3^{99}$. In this case, the simple closed form expression is much simpler and faster than bashing through the values of $a_n$.
 
 In the next two sections, we'll talk about how to derive these closed form expressions for any linear recurrence. We'll first discuss homogenous recurrences since solving them is much simpler and more systematic than solving non-homogenous recurrences.
 
 ## Solving Homogenous Recurrences
 
-As a recap of what it means for a linear recurrence to be homogenous, a homogenous linear recurrence does not contain any terms besides $a_n$ in its recurrence relation. In particular, this means that there can be no constant coefficients or any terms that involve $n$ directly inside of the recurrence relation. See [Homogenous vs Non-Homogenous](#Homogenous-vs-Non-Homogenous) for more details.
+As a recap of what it means for a linear recurrence to be homogenous, a homogenous linear recurrence does not contain any terms besides $a_n$ in its recurrence relation. In particular, this means that there can be no constant coefficients or any terms that involve $n$ directly inside of the recurrence relation. See *Homogenous vs Non-Homogenous* for more details.
 
 To solve these recurrences, we'll first construct something known as the characteristic polynomial and characteristic equation of the recurrence relation.
 
@@ -182,17 +184,17 @@ To find the solution to our recurrence relation, we need to find the characteris
 
 In the case where they are all distinct, let's call our characteristic roots $r_1, r_2, ..., r_k$. Our solution to the linear recurrence is then of the form:
 
-$$a_n = \alpha_1 r_1^n + \alpha_2 r_2^n + ... + \alpha_k r_k^n$$
+$$a_n = \alpha_{\small 1} r_1^n + \alpha_{\small 2} r_2^n + ... + \alpha_{\small k} r_k^n$$
 
-The next thing we need to do is just solve for our values of $\alpha$, which we can do by plugging in the initial conditions. See the [Homogenous Recurrence Examples](#Homogenous-Recurrence-Examples) section below to see an example of this.
+The next thing we need to do is just solve for our values of $\alpha$, which we can do by plugging in the initial conditions. See the *Homogenous Recurrence Examples* section below to see an example of this.
 
 Next, let's consider the roots are not distinct. How many times a root appears as a solution to a polynomial is known as its multiplicity. For instance, the equation $(x-3)^2(x-2)$ has $2$ distinct roots. $2$ is a root with multiplicity $1$ while $3$ is a root with multiplicity $2$. Therefore, the idea of having non-distinct roots means that there are some characteristic roots with multiplicity greater than $1$.
 
 Let's denote the multiplicity of the characteristic root $r_i$ by $m_i$, and let's say that we have $x$ distinct roots. Then, our solution has the following form instead:
 
-$$a_n = \sum_{i=0}^{x}\sum_{j=0}^{m_i}\alpha_{i,j}n^jr_i^n$$
+$$a_n = \sum_{i=1}^{x}\sum_{j=1}^{m_i}\alpha_{\small i,j}n^{j-1}r_i^n$$
 
-Once again, we can just plug in the initial conditions to find our values of $\alpha$. This form is pretty hard to understand from the formula, so see the example in the [Homogenous Recurrence Examples](#Homogenous-Recurrence-Examples) section below. What it does is basically just adds another exponential for each copy of the characteristic root but with an extra $n$ factor tacked onto it.
+Once again, we can just plug in the initial conditions to find our values of $\alpha$. This form is pretty hard to understand from the formula, so see the example in the *Non-Homogenous Recurrence Examples* section below. What it does is basically just adds another exponential for each copy of the characteristic root but with an extra $n$ factor tacked onto it.
 
 ### Homogenous Recurrence Examples
 
@@ -216,20 +218,20 @@ $$x^2 - 5x + 6 = 0$$
 
 We can solve this by factoring to get $x = 2, 3$. All of our roots are distinct, so we can use the following form:
 
-$$a_n = \alpha_1 r_1^n + \alpha_2 r_2^n + ... + \alpha_k r_k^n$$
+$$a_n = \alpha_{\small 1} r_1^n + \alpha_{\small 2} r_2^n + ... + \alpha_{\small k} r_k^n$$
 
-$$a_n = \alpha_1 2^n + \alpha_2 3^n$$
+$$a_n = \alpha_{\small 1} 2^n + \alpha_{\small 2} 3^n$$
 
-From here, we can plug in our initial conditions of $a_0 = 2, a_1 = 3$. This gives us the following system of equations that we can use to solve for $\alpha_1$ and $\alpha_2$.
+From here, we can plug in our initial conditions of $a_0 = 2, a_1 = 3$. This gives us the following system of equations that we can use to solve for $\alpha_{\small 1}$ and $\alpha_{\small 2}$.
 
 $$
 \begin{align*}
-a_0 = 2 = \alpha_1 * 2^0 + \alpha_2 * 3^0 \\
-a_1 = 3 = \alpha_1 * 2^1 + \alpha_2 * 3^1
+a_0 = 2 = \alpha_{\small 1} * 2^0 + \alpha_{\small 2} * 3^0 \\
+a_1 = 3 = \alpha_{\small 1} * 2^1 + \alpha_{\small 2} * 3^1
 \end{align*}
 $$
 
-Solving, we get $\alpha_1 = 3, \alpha_2 = -1$. Therefore, the final solution to this recurrence equation is:
+Solving, we get $\alpha_{\small 1} = 3, \alpha_{\small 2} = -1$. Therefore, the final solution to this recurrence equation is:
 
 $$\boxed{a_n = 3 * 2^n - 3^n}$$
 
@@ -261,18 +263,18 @@ $$(x-4)^3(x-2) = 0$$
 
 Therefore, we have the characteristic root $4$ with multiplicity $3$ and the characteristic root $2$ with multiplicity $1$. We can then plug this into the form mentioned above:
 
-$$a_n = \sum_{i=0}^{x}\sum_{j=0}^{m_i}\alpha_{i,j}n^jr_i^n$$
+$$a_n = \sum_{i=1}^{x}\sum_{j=1}^{m_i}\alpha_{\small i,j}n^{j-1}r_i^n$$
 
-$$a_n = \alpha_{1,1} 4^n + \alpha_{1,2} n4^n + \alpha_{1,3} n^2 4^n + \alpha_{2,1} 2^n$$
+$$a_n = \alpha_{\small 1,1} 4^n + \alpha_{\small 1,2} n4^n + \alpha_{\small 1,3} n^2 4^n + \alpha_{\small 2,1} 2^n$$
 
 We can then plug in our four initial conditions to solve this recurrence:
 
 $$
 \begin{align*}
-a_0 = 2 = \alpha_{1,1} * 4^0 + \alpha_{1,2} * 0 * 4^0 + \alpha_{1,3} * 0^2 * 4^0 + \alpha_{2,1} 2^0 \\
-a_1 = 3 = \alpha_{1,1} * 4^1 + \alpha_{1,2} * 1 * 4^1 + \alpha_{1,3} * 1^2 * 4^1 + \alpha_{2,1} 2^1 \\
-a_2 = 5 = \alpha_{1,1} * 4^2 + \alpha_{1,2} * 2 * 4^2 + \alpha_{1,3} * 2^2 * 4^2 + \alpha_{2,1} 2^2 \\
-a_3 = 9 = \alpha_{1,1} * 4^3 + \alpha_{1,2} * 3 * 4^3 + \alpha_{1,3} * 3^2 * 4^3 + \alpha_{2,1} 2^3
+a_0 = 2 = \alpha_{\small 1,1} * 4^0 + \alpha_{\small 1,2} * 0 * 4^0 + \alpha_{\small 1,3} * 0^2 * 4^0 + \alpha_{\small 2,1} 2^0 \\
+a_1 = 3 = \alpha_{\small 1,1} * 4^1 + \alpha_{\small 1,2} * 1 * 4^1 + \alpha_{\small 1,3} * 1^2 * 4^1 + \alpha_{\small 2,1} 2^1 \\
+a_2 = 5 = \alpha_{\small 1,1} * 4^2 + \alpha_{\small 1,2} * 2 * 4^2 + \alpha_{\small 1,3} * 2^2 * 4^2 + \alpha_{\small 2,1} 2^2 \\
+a_3 = 9 = \alpha_{\small 1,1} * 4^3 + \alpha_{\small 1,2} * 3 * 4^3 + \alpha_{\small 1,3} * 3^2 * 4^3 + \alpha_{\small 2,1} 2^3
 \end{align*}
 $$
 
@@ -280,22 +282,22 @@ This gives us the following system of equations:
 
 $$
 \begin{align*}
-2 &= \alpha_{1, 1} + \alpha_{2, 1} \\
-3 &= 4\alpha_{1, 1} + 4\alpha_{1, 2} + 4\alpha_{1, 3} + 2\alpha_{2, 1} \\
-5 &= 16\alpha_{1, 1} + 32\alpha_{1, 2} + 64\alpha_{1, 3} + 4\alpha_{2, 1} \\
-9 &= 64\alpha_{1, 1} + 192\alpha_{1, 2} + 576 \alpha_{1, 3} + 8\alpha_{2, 1}
+2 &= \alpha_{\small 1, 1} + \alpha_{\small 2, 1} \\
+3 &= 4\alpha_{\small 1, 1} + 4\alpha_{\small 1, 2} + 4\alpha_{\small 1, 3} + 2\alpha_{\small 2, 1} \\
+5 &= 16\alpha_{\small 1, 1} + 32\alpha_{\small 1, 2} + 64\alpha_{\small 1, 3} + 4\alpha_{\small 2, 1} \\
+9 &= 64\alpha_{\small 1, 1} + 192\alpha_{\small 1, 2} + 576 \alpha_{\small 1, 3} + 8\alpha_{\small 2, 1}
 \end{align*}
 $$
 
 Solving this system, we get
 
-$$\alpha_{1,1} = -\frac{19}{8}, \alpha_{1,2} = \frac{69}{64}, \alpha_{1,3} = -\frac{9}{64}, \alpha_{2,1} = \frac{35}{8}$$
+$$\alpha_{\small 1,1} = -\frac{19}{8}, \alpha_{\small 1,2} = \frac{69}{64}, \alpha_{\small 1,3} = -\frac{9}{64}, \alpha_{\small 2,1} = \frac{35}{8}$$
 
 Therefore, our final answer is:
 
 $$\boxed{a_n = -\frac{19}{8} 4^n + \frac{69}{64} n4^n -\frac{9}{64} n^2 4^n + \frac{35}{8} 2^n}$$
 
-## Non-Homogenous Recurrence
+## Solving Non-Homogenous Recurrences
 
 While there was a systematic way to approach homogenous recurrences, solving non-homogenous recurrences requires more guessing. First, note that we can express any non-homogenous linear recurrence $a_n$ as the sum of a homogenous linear recurrence $b_n$ and a polynomial $f(n)$.
 
@@ -337,7 +339,7 @@ $$(x-2)(x-1) = 0$$
 
 Therefore, our solution to $b_n$ will be of the form:
 
-$$b_n = \alpha_1 2^n + \alpha_2 1^n = \alpha_1 2^n + \alpha_2$$
+$$b_n = \alpha_{\small 1} 2^n + \alpha_{\small 2} 1^n = \alpha_{\small 1} 2^n + \alpha_{\small 2}$$
 
 Now that we have solved the homogenous version of the problem, we can move on to guessing and checking for solutions to our non-homogenous $a_n$. First, note that $f(n)$ is a linear polynomial, so we may guess that a solution $a_n$ might also be a linear polynomial. Let's try this and do:
 
@@ -349,7 +351,7 @@ $$
 \begin{align*}
 a_n &= 3a_{n-1} - 2a_{n-2} + 3n + 4 \\
 an + b &= 3(a(n-1) + b) - 2(a(n-2) + b) + 3n + 4 \\
-an + b &= 3an - 3a + 3b - 2an + 4a - 2b + 3n + 4 \\
+&= 3an - 3a + 3b - 2an + 4a - 2b + 3n + 4 \\ \\
 0 &= a + 3n + 4 \\
 \end{align*}
 $$
@@ -362,10 +364,10 @@ We can then do the exact same as before, although it will get a bit messy due to
 
 $$
 \begin{align*}
-a_n &= 3a_{n-1} - 2a_{n-2} + 3n + 4 \\
+a_n &= 3a_{n-1} - 2a_{n-2} + 3n + 4 \\ \\
 an^2 + bn + c &= 3(a(n-1)^2 + b(n-1) + c) - 2(a(n-2)^2 + b(n-2) + c) + 3n + 4 \\
-an^2 + bn + c &= 3(a(n^2 - 2n + 1) + b(n-1) + c) - 2(a(n^2-4n + 4) + b(n-2) + c) + 3n + 4 \\
-an^2 + bn + c &= 3an^2 - 6an + 3a + 3bn - 3b + 3c - 2an^2 + 8an - 8a - 2bn + 4b - 2c + 3n + 4 \\
+&= 3(a(n^2 - 2n + 1) + b(n-1) + c) - 2(a(n^2-4n + 4) + b(n-2) + c) + 3n + 4 \\
+&= 3an^2 - 6an + 3a + 3bn - 3b + 3c - 2an^2 + 8an - 8a - 2bn + 4b - 2c + 3n + 4 \\ \\
 0 &= 2an - 5a + b + 3n + 4 \\
 \end{align*}
 $$
@@ -375,10 +377,10 @@ Now that we've simplified our equation greatly, this looks much more promising! 
 $$
 \begin{align*}
 0 &= (2a+3)n - 5a + b + 4 \\
-0 &= 2a + 3
-a &= -\frac{3}{2}
-0 &= -5a + b + 4
-b &= -\frac{23}{2}
+0 &= 2a + 3 \\
+a &= -\frac{3}{2} \\ \\
+0 &= -5a + b + 4 \\
+b &= -\frac{23}{2} \\
 \end{align*}
 $$
 
@@ -390,14 +392,14 @@ If you plug this into the recurrence relation, this will satisfy that relationsh
 
 $$
 \begin{align*}
-a_n &= -\frac{3}{2}n^2 - \frac{23}{2}n + \alpha_1 2^n + \alpha_2 \\
-a_0 &= 1 = -\frac{3}{2} * 0^2 - \frac{23}{2} * 0 + \alpha_1 2^0 + \alpha_2 \\
-a_1 &= 2 = -\frac{3}{2}* 1^2 - \frac{23}{2} * 1 + \alpha_1 2^1 + \alpha_2 \\
-1 &= \alpha_1 + \alpha_2 \\
-2 &= -\frac{3}{2} - \frac{23}{2} + 2\alpha_1 + \alpha_2 \\
-15 &= 2\alpha_1 + \alpha_2 \\
-\alpha_1 &= 14 \\
-\alpha_2 &= -13
+a_n &= -\frac{3}{2}n^2 - \frac{23}{2}n + \alpha_{\small 1} 2^n + \alpha_{\small 2} \\ \\
+a_0 &= 1 = -\frac{3}{2} * 0^2 - \frac{23}{2} * 0 + \alpha_{\small 1} 2^0 + \alpha_{\small 2} \\
+a_1 &= 2 = -\frac{3}{2}* 1^2 - \frac{23}{2} * 1 + \alpha_{\small 1} 2^1 + \alpha_{\small 2} \\ \\
+1 &= \alpha_{\small 1} + \alpha_{\small 2} \\
+2 &= -\frac{3}{2} - \frac{23}{2} + 2\alpha_{\small 1} + \alpha_{\small 2} \\
+15 &= 2\alpha_{\small 1} + \alpha_{\small 2} \\ \\
+\alpha_{\small 1} &= 14 \\
+\alpha_{\small 2} &= -13
 \end{align*}
 $$
 
@@ -422,9 +424,9 @@ To prove this, we can simply apply the recurrence relation definition a few time
 
 $$
 \begin{align*}
-a_n = c_1a_{n-1} + c_2a_{n-2} + ... + c_ka_{n-k} \\
-b_n = c_1b_{n-1} + c_2b_{n-2} + ... + c_kb_{n-k} \\
-a_n + b_n = c_1(a_{n-1} + b_{n-1}) + c_2(a_{n-2} + b_{n-2}) + ... + c_k(a_{n-k} + b_{n-k}) \\
+a_n &= c_1a_{n-1} + c_2a_{n-2} + ... + c_ka_{n-k} \\
+b_n &= c_1b_{n-1} + c_2b_{n-2} + ... + c_kb_{n-k} \\
+a_n + b_n &= c_1(a_{n-1} + b_{n-1}) + c_2(a_{n-2} + b_{n-2}) + ... + c_k(a_{n-k} + b_{n-k}) \\ \\
 d_n &= a_n + b_n = c_1d_{n-1} + c_2d_{n-2} + ... + c_kd_{n-k}
 \end{align*}
 $$
@@ -440,12 +442,12 @@ To prove this, we can simply apply the recurrence relation definition.
 $$
 \begin{align*}
 a_n &= c_1a_{n-1} + c_2a_{n-2} + ... + c_ka_{n-k} \\
-\alpha a_n &= c_1 \alpha a_{n-1} + c_2 \alpha a_{n-2} + ... + c_k \alpha a_{n-k} \\
-d_n &= \alpha a_n = c_1d_{n-1} + c_2d_{n-2} + ... + c_k d_{n-k}
+\alpha * a_n &= c_1 \alpha * a_{n-1} + c_2 \alpha * a_{n-2} + ... + c_k \alpha * a_{n-k} \\ \\
+d_n &= \alpha * a_n = c_1d_{n-1} + c_2d_{n-2} + ... + c_k d_{n-k}
 \end{align*}
 $$
 
-Now that we have this, we can construct an approach to our problem. If we have a recurrence relation of degree $k$, then there will be $k$ initial values that we need to satisfy. Therefore, what we can do is find $k$ different sequences that satisfy our recurrence relation. We can add together these $k$ different sequences to get another sequence that will still satisfy this recurrence relation. If we take each of those $k$ different sequences and we multiply each one by some multipler $\alpha_k$, our recurrence relation will also have $k$ different parameters that we can use to completely modify the value of our sequence. Therefore, we can use this to make our sequence match the initial values of our recurrence sequence.
+Now that we have this, we can construct an approach to our problem. If we have a recurrence relation of degree $k$, then there will be $k$ initial values that we need to satisfy. Therefore, what we can do is find $k$ different sequences that satisfy our recurrence relation. We can add together these $k$ different sequences to get another sequence that will still satisfy this recurrence relation. If we take each of those $k$ different sequences and we multiply each one by some multipler $\alpha_{\small k}$, our recurrence relation will also have $k$ different parameters that we can use to completely modify the value of our sequence. Therefore, we can use this to make our sequence match the initial values of our recurrence sequence.
 
 Now, that we have an approach, we can start finding small solutions that will fit into this recurrence equation.
 
@@ -512,10 +514,10 @@ To prove this, let us write out the definitions of our sequences and do a bit of
 $$
 \begin{align*}
 a_n &= c_1a_{n-1} + c_2a_{n-2} + ... + c_ka_{n-k} + f(n) \\
-b_n &= c_1b_{n-1} + c_2b_{n-2} + ... + c_kb_{n-k} \\
+b_n &= c_1b_{n-1} + c_2b_{n-2} + ... + c_kb_{n-k} \\ \\
 d_n &= a_n + b_n \\
-d_n &= c_1(a_{n-1} + b_{n-1}) + c_2(a_{n-2} + b_{n-2}) + ... + c_k(a_{n-k} + b_{n-k}) + f(n) \\
-d_n &= c_1d_{n-1} + c_2d_{n-2} + ... + c_kd_{n-k} + f(n)
+&= c_1(a_{n-1} + b_{n-1}) + c_2(a_{n-2} + b_{n-2}) + ... + c_k(a_{n-k} + b_{n-k}) + f(n) \\
+&= c_1d_{n-1} + c_2d_{n-2} + ... + c_kd_{n-k} + f(n)
 \end{align*}
 $$
 
@@ -525,7 +527,7 @@ Finding the specific non-homogenous solution is hard though. Fortunately, as men
 
 ## Conclusion
 
-Solving linear recurrences can be very hard at times, but it can also be extremely powerful for solving some math problems. Not only can it greatly shorten calculations, but it can also put your answers into forms you may not have seen otherwise. For instance, if you have the closed form $a_n = 3^n - 2^n$, you can calculate your answer in a really nice way and see that it is the difference of two exponentials. If you bashed out the values of $a_n$ instead and got something like $a_10 = 58025$, it would be really hard to see this connection.
+Solving linear recurrences can be very hard at times, but it can also be extremely powerful for solving some math problems. Not only can it greatly shorten calculations, but it can also put your answers into forms you may not have seen otherwise. For instance, if you have the closed form $a_n = 3^n - 2^n$, you can calculate your answer in a really nice way and see that it is the difference of two exponentials. If you bashed out the values of $a_n$ instead and got something like $a_{10} = 58025$, it would be really hard to see this connection.
 
 ## Sources
 
