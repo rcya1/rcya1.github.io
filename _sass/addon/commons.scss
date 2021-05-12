@@ -66,7 +66,21 @@ h2 {
   @extend %section;
   @extend %anchor;
 
-  font-size: 1.4rem;
+  font-size: 2.0rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+h2::before,
+h2::after {
+    display: inline-block;
+    content: "";
+    border-top: .2rem solid black;
+    width: 3rem;
+    margin: 0 1rem;
+    transform: translateY(-0.6rem);
 }
 
 h3 {
@@ -74,7 +88,10 @@ h3 {
   @extend %section;
   @extend %anchor;
 
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1.0rem;
 }
 
 h4 {
