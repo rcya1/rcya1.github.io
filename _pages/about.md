@@ -1,12 +1,9 @@
 ---
-title: About Me
-icon: fas fa-info
-order: 1
+permalink: /about/
+title: "About Me"
 ---
 
-Hi, I'm Ryan! I'm currently a senior at Union County Magnet High School in Scotch Plains, NJ.
-
-This fall, I'm going to be attending the Massachusetts Institute of Technology, where I'm planning on studying Course 6-3 (Computer Science and Engineering).
+Hi, I'm Ryan! This fall, I'm going to be attending the Massachusetts Institute of Technology, where I'm planning on studying Course 6-3 (Computer Science and Engineering). I attended Union County Magnet High School from 2017-2021.
 
 Besides computer science, I'm also interested in math, playing video games, solving Rubik's cubes, and much more!
 
@@ -21,20 +18,19 @@ A machine learning based data analysis platform for satellite ocean color sensor
 
 ## High School
 
-During high school, I participated in our school's math league, FIRST robotics team, and Science Olympiad team. Outside of school, I also participated in the USA Computing Olympiad.
+### Math Awards
 
-### Math League
-
-- AIME qualifier in 2019, 2020, and 2021
 - USAMO qualifier in 2021
+- AIME qualifier in 2019, 2020, and 2021
 - ARML 2019 - 3rd place in B division (member of Central Jersey B1 team)
 - ARML Local 2020 - Tied for 13th place individually
 - Helped write problems and solutions for the Hallow’s Eve Online Math Tournament (HEOMT)
-  - Sponsored by companies such as Wolfram, Jane Street, 1Password, and Maplesoft to offer over $1000 in prizes to ~100 participants
+  - Sponsored by companies such as Wolfram, Jane Street, and 1Password to offer over $1000 in prizes to ~100 participants
 
-### USA Computing Olympiad
+### Competitive Programming Awards
 
-- Platinum division contestant
+- USA Computing Olympiad Platinum Division
+- Qualified for Google Code Jam Round 2 in 2021
 
 ### FRC Robotics
 

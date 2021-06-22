@@ -1,10 +1,11 @@
 ---
-title: Projects
-icon: fas fa-stream
-order: 2
+permalink: /projects/
+title: "Projects"
 ---
 
-<h2 class="projects-header">Programming</h2>
+A selection of the various projects I've worked on throughout my time during high school.
+
+## Programming
 
 ### Year in Pixels Creator
 
@@ -32,11 +33,11 @@ Game where players to compete against each other in a simulated version of the 2
 
 ---
 
-<h2 class="projects-header">Other</h2>
+## Other
 
 ### OC-SMART Algorithm
 
-Interned at Stevens Institute of Technology to help write an algorithm for processing ocean satellite data
+Plugin implementing an algorithm for processing ocean satellite data (made during internship at Stevens Institute of Technology)
 
 - More Information: [http://www.rtatmocn.com/oc-smart/](http://www.rtatmocn.com/oc-smart/)
 

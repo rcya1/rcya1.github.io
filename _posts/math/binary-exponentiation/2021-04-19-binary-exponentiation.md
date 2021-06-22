@@ -2,17 +2,19 @@
 title: Binary Exponentiation
 date: 2021-04-19 11:00:00 -0400
 categories: [Math Articles]
-tags: [math, article, binary, exponents, modular arithmetic]
+tags: [Math, Guide, Modular Arithmetic]
 math: true
+toc: true
+excerpt: Let's say you wanted to calculate the large power of a number modulo another such as 7^39 mod 1000. The most naive way to do this would be to multiply 7 by itself 39 times and then take the remainder when divided by 1000, aka the last 3 digits. However, this technique quickly becomes unmanageable, especially since 7^39 has 32 digits, which would lead to a lot of work and the opportunity to make a lot of mistakes. Instead, we could work smarter, not harder.
 ---
 
 ## Typical Exponentiation
 
-Let's say you wanted to calculate the large power of a number modulo another, such as
+Let's say you wanted to calculate the large power of a number modulo another such as
 
 $$7^{39} \pmod{1000}$$
 
-The most naive way to do this would be to literally multiply $7$ by itself $39$ times and then take the remainder when divided by $1000$, aka the last $3$ digits. However, this technique quickly becomes unmanageable, especially since $7^{39}$ has $32$ digits, which would lead to a lot of work and the opportunity to make a lot of mistakes. Instead, we could work smarter, not harder.
+The most naive way to do this would be to multiply $7$ by itself $39$ times and then take the remainder when divided by $1000$, aka the last $3$ digits. However, this technique quickly becomes unmanageable, especially since $7^{39}$ has $32$ digits, which would lead to a lot of work and the opportunity to make a lot of mistakes. Instead, we could work smarter, not harder.
 
 The next way we could augment this process is by realizing that after each successive multiplication, we could take the intermediate product modulo $1000$. For instance, we would first have $7, 7^2 = 49, 7^3 = 343$. After this, we would have $7^4 = 2401$, but we can ignore everything but the last $3$ digits and simply take the $401$ as our product moving forward. By continuing this strategy, we will constantly stay with small numbers and not have to deal with $32$ digit monstrosities. However, this still involves us doing $38$ multiplications to get from $7$ to $7^{39}$. As the exponent grows even larger, it would become infeasible for humans to do it by hand.
 
@@ -41,16 +43,16 @@ Let's look at a few examples to make sure we are comfortable with binary, but fe
 <blockquote class="blockquote-example">
 <hr>
 Express the binary number $111011$ in base $10$.
+</blockquote>
 
 We can do this by looking at each digit from right to left and using those to see which powers of $2$ are present in our number. Since the first two digits on the right are both $1$s, we know that $2^0$ and $2^1$ are present in our number. Since the third digit is a $0$, $2^2$ is not. However, the next three are, so the total sum would be $$2^0 + 2^1 + 2^3 + 2^4 + 2^5 = \boxed{52}$$
-</blockquote>
 
 <blockquote class="blockquote-example">
 <hr>
 Express the number $37$ in binary.
+</blockquote>
 
 We can do this by first looking for the largest power of $2$ present in $37$. The powers of $2$ are $1, 2, 4, 8, 16, 32, 64, ...$ Since $32 < 37$ but $64 > 37$, we know that $32$ is the largest power of $2$ present. We can keep note that $32 = 2^5$ is present in the number and move on by subtracting $32$ from $37$. We are left with $5$ and we have to now find the largest power of $2$ present in that. The answer is $4 = 2^2$, and after subtracting that we are left with $1 = 2^0$. We know that the powers of $2$ present are $0, 2, 5$, which corresponds to the number $100101$, since all of the correct powers of $2$ are represented there.
-</blockquote>
 
 ## Full Binary Exponentiation
 

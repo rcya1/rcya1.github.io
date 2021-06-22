@@ -2,8 +2,10 @@
 title: Roots of Unity Filter Part 3 - Roots of Unity Filter
 date: 2021-04-18 15:15:00 -0400
 categories: [Math Articles, Roots of Unity Filter]
-tags: [math, article, roots of unity filter, roots of unity]
+tags: [Math, Guide, Roots of Unity Filter, Roots of Unity, Complex Numbers]
 math: true
+toc: true
+excerpt: The main problem we are trying to tackle in this section is the following from one of Thomas Mildorf's mock AIMEs. We can tackle this problem in a variety of ways, but the approach we will be using here is a technique known as roots of unity filter.
 ---
 
 ## Note

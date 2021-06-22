@@ -1,0 +1,113 @@
+---
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+html {
+  font-size: 12px; // change to whatever
+
+  @include breakpoint($medium) {
+    font-size: 14px; // change to whatever
+  }
+
+  @include breakpoint($large) {
+    font-size: 16px; // change to whatever
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 18px; // change to whatever
+  }
+}
+.breadcrumbs, .archive__item, .page__content {
+  a, a:visited {
+    color: #4e91a5;
+  }
+  
+  a:hover {
+    color: #235e70;
+    outline: 0;
+  }
+}
+
+mjx-container {
+    overflow-x: auto;
+    overflow-y: visible;
+
+    // Black magic wizardry hack to prevent vertical scrollbars
+    padding-bottom: 10px; margin-bottom: -10px;
+    padding-top: 10px; margin-top: -10px;
+}
+
+blockquote {
+    padding: .5em;
+    font-style: normal;
+}
+
+blockquote hr {
+    margin: .5em 0;
+}
+
+.blockquote-definition {
+    color: #285b2a;
+    background-color: #dbefdc;
+    border-color: #c9e7cb
+}
+
+.blockquote-theorem {
+  color: #02587f;
+  background-color: #cdeefd;
+  border-color: #b4e6fc;
+}
+
+.blockquote-example {
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+}
+
+.blockquote-example-no-text {
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+}
+
+.blockquote-warning {
+  color: #852d12;
+  background-color: #ffddd3;
+  border-color: #ffc9ba;
+}
+
+.blockquote-note {
+  color: #02587f;
+  background-color: #cdeefd;
+  border-color: #b4e6fc;
+}
+
+blockquote:before {
+    white-space: pre;
+    font-weight: 700;
+    text-decoration: italicized;
+}
+
+.blockquote-definition:before {
+    content: "Definition\A";
+}
+
+.blockquote-theorem:before {
+    content: "Theorem\A";
+}
+
+.blockquote-example:before {
+    content: "Example\A";
+}
+
+.blockquote-warning:before {
+    content: "Warning\A";
+}
+
+.blockquote-note:before {
+    content: "Note\A";
+}

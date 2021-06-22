@@ -1,15 +1,4 @@
-# hidden files
-.*
-!.github
-
-# bundler cache
 _site
-vendor
+.sass-cache
+.jekyll-metadata
 Gemfile.lock
-
-# rubygem
-*.gem
-
-# npm dependencies
-node_modules
-package-lock.json

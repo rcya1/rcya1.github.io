@@ -1,173 +1,108 @@
-# The Site Configuration
-
-# Import the theme
-theme: jekyll-theme-chirpy
-
-# Only if your site type is GitHub Project sites and doesn't have a custom domain,
-# change below value to '/projectname'.
-baseurl: ''
-
-# the HTML language tag › https://www.w3.org/International/questions/qa-choosing-language-tags
-lang: en-US
-
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: America/New_York
-
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# --------------------------
-title: Ryan Chang                          # the main title
-
-tagline: High school senior going to MIT this fall to study computer science # it will display as the sub-title
-
-description: >-                        # used by seo meta and the atom feed
-  Personal website and blog for student studying computer science
-
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://ryan10145.github.io'
-
-github:
-  username: ryan10145             # change to your github username
-
-# twitter:
-#   username: twitter_username            # change to your twitter username
-
-social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Ryan Chang
-  email: chang.ryan10145@gmail.com             # change to your email address
-  links:
-    # The first element serves as the copyright owner's link
-    - https://github.com/ryan10145       # change to your github homepage
-    # - https://twitter.com/username      # change to your twitter homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
-
-google_site_verification: google_meta_tag_verification # change to your verification string
-# --------------------------
-
-google_analytics:
-  id: ''          # Fill with your Google Analytics ID
-  pv:
-    # The Google Analytics pageviews switch.
-    # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
-    enabled: false
-    # the next options only valid when `google_analytics.pv` is enabled.
-    proxy_url: ''
-    proxy_endpoint: ''
-    cache: false  # pv data local cache, good for the users from GFW area.
-
-# Prefer color scheme setting.
+# Welcome to Jekyll!
 #
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
 #
-# Available options:
-#
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
-#
-theme_mode:   # [light|dark]
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
-img_cdn: ''
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Ryan Chang's Personal Website
+email: chang.ryan10145@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Personal website / blog for incoming freshman at MIT studying computer science and engineering
+github_username: Ryan10145
+minimal_mistakes_skin: contrast
+search: true
 
-# the avatar on sidebar, support local or CORS resources
-avatar: https://avatars.githubusercontent.com/u/8119928?v=4
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# boolean type, the global switch for ToC in posts.
-toc: true
-
-disqus:
-  comments: true  # boolean type, the global switch for posts comments.
-  shortname: 'ryan10145-github-io'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-
-paginate: 10
-
-# ------------ The following options are not recommended to be modified ------------------
-
+breadcrumbs: true
 kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: highlight
-    # default_lang: console
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
+  math_engine: katex
 
-# DO NOT change this unless you're a Pro user on Jekyll and Web development,
-# Or you think you're smart enough to change other relevant URLs within this template.
-permalink: /posts/:title/
+include:
+  - _pages
 
-collections:
-  tabs:
-    output: true
-    sort_by: order
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
 
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+author:
+  name   : "Ryan Chang"
+  avatar : "https://avatars.githubusercontent.com/u/8119928?v=4"
+  bio    : "Incoming freshman at MIT studying computer science and engineering"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Ryan10145"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/ryan-chang-105495215/"
+    
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Ryan10145"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/ryan-chang-105495215/"
 
 defaults:
-  -
-    scope:
-      path: ''          # An empty string here means all files in the project
+  # _posts
+  - scope:
+      path: ""
       type: posts
     values:
-      layout: post
-      comments: true    # Enable comments in posts.
-      toc: true         # Display TOC column in posts.
-  -
-    scope:
-      path: _drafts
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
     values:
-      comments: false
-  -
-    scope:
-      path: ''
-      type: tabs             # see `site.collections`
-    values:
-      layout: page
-      permalink: /:title/
-      dynamic_title: true    # Hide title in mobile screens.
+      layout: single
+      author_profile: true
 
-sass:
-  style: compressed
-
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: [development]
-
-exclude:
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-  - '*.gem'
-  - '*.gemspec'
-  - tools
-  - docs
-  - README.md
-  - LICENSE
-  - gulpfile.js
-  - node_modules
-  - package.json
-  - package-lock.json
-
-jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/

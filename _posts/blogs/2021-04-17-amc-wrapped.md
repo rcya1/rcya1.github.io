@@ -2,8 +2,10 @@
 title: Four Years of AMC, Wrapped
 date: 2021-04-17 23:30:00 -0400
 categories: [Blogs, Math Blogs]
-tags: [blog, math, amc, aime, usamo]
+tags: [Blog, Math, Competitions]
 math: true
+toc: true
+excerpt: It’s finally over now. After four years of taking the American Math Competition (AMC) contest series, I’m finally done. In a way, it feels liberating. No longer will I have to grind out test after test, fill countless notebooks with scrap work, or waste hundreds of sheets of paper printing out practice tests.
 ---
 
 ## The End of Four Seasons
