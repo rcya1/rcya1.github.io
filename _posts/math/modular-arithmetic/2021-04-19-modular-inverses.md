@@ -1,10 +1,11 @@
 ---
 title: Modular Inverses
 date: 2021-04-19 11:15:00 -0400
-categories: [Math Articles]
+categories: [Math]
 tags: [Math, Guide, Modular Arithmetic]
 math: true
 toc: true
+toc_sticky: true
 excerpt: For modular arithmetic, the operations of addition, subtraction, and multiplication are pretty easy to define and understand. You simply perform the operation and then perform the modulo operator on the output. However, this doesn't apply to division, since division frequently leads to fractions/decimals, which is not what we are looking for when considering remainders.
 ---
 

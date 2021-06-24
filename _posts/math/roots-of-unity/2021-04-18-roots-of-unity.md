@@ -1,10 +1,11 @@
 ---
 title: Roots of Unity Filter Part 2 - Roots of Unity
 date: 2021-04-18 15:00:00 -0400
-categories: [Math Articles, Roots of Unity Filter]
+categories: [Math, Roots of Unity Filter]
 tags: [Math, Guide, Roots of Unity Filter, Roots of Unity, Complex Numbers]
 math: true
 toc: true
+toc_sticky: true
 excerpt: The nth roots of unity for a positive integer n are all of the complex numbers z that satisfy the equation z^n = 1. One thing to note from this equation is that there are n nth roots of unity since the roots of unity could be interpreted as the n roots to the polynomial z^n - 1.
 ---
 

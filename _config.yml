@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ryan Chang's Personal Website
+title: Ryan Chang
 email: chang.ryan10145@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Personal website / blog for incoming freshman at MIT studying computer science and engineering
@@ -28,7 +28,7 @@ remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York
 
 breadcrumbs: true
 kramdown:
