@@ -32,13 +32,17 @@ html {
   }
 }
 
-mjx-container {
+.mjx-chtml {
     overflow-x: auto;
     overflow-y: visible;
 
     // Black magic wizardry hack to prevent vertical scrollbars
     padding-bottom: 10px; margin-bottom: -10px;
     padding-top: 10px; margin-top: -10px;
+
+    .MathJax_CHTML {
+      width: 100%;
+    }
 }
 
 blockquote {

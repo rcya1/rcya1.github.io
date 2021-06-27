@@ -40,17 +40,17 @@ Divison is a pretty weird thing in modular arithmetic, although it can be applie
 1. Both sides of the equation are divisible by the divisor.
 2. The divisor is coprime with $n$.
 
-|                         | Condition $(1)$ Met                           | Condition $(1)$ Not Met          |
+|                         | Condition (1) Met                           | Condition (1) Not Met          |
 |-------------------------|-----------------------------------------------|----------------------------------|
-| Condition $(2)$ Met     | You can divide safely                         | You have to use modular inverses |
-| Condition $(2)$ Not Met | You have to divide everything by $\gcd(a, n)$ | The equation has no solutions    |
+| Condition (2) Met     | You can divide safely                         | You have to use modular inverses |
+| Condition (2) Not Met | You have to divide everything by $\gcd(a, n)$ | The equation has no solutions    |
 
 Here are examples of equations that would belong in each box:
 
-|                         | Condition $(1)$ Met       | Condition $(1)$ Not Met   |
+|                         | Condition (1) Met       | Condition (1) Not Met   |
 |-------------------------|---------------------------|---------------------------|
-| Condition $(2)$ Met     | $3x \equiv 6 \pmod{7}$    | $3x \equiv 4 \pmod{7}$    |
-| Condition $(2)$ Not Met | $6x \equiv 12 \pmod{15}$  | $3x \equiv 4 \pmod{6}$    |
+| Condition (2) Met     | $3x \equiv 6 \pmod{7}$    | $3x \equiv 4 \pmod{7}$    |
+| Condition (2) Not Met | $6x \equiv 12 \pmod{15}$  | $3x \equiv 4 \pmod{6}$    |
 
 
 For instance, the given bottom right equation has no integer solutions. For the upper right equation, we can divide both sides by 3 to solve:
