@@ -69,6 +69,9 @@ author:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin-in"
       url: "https://www.linkedin.com/in/ryan-chang-105495215/"
+    - label: "chang.ryan10145@gmail.com"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:chang.ryan10145@gmail.com"
     
 
 footer:
