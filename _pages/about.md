@@ -3,9 +3,9 @@ permalink: /about/
 title: "About Me"
 ---
 
-Hi, I'm Ryan! This fall, I'm going to be attending the Massachusetts Institute of Technology, where I'm planning on studying Course 6-3 (Computer Science and Engineering). I attended Union County Magnet High School from 2017-2021.
+Hi, I'm Ryan! I'm currently attending the Massachusetts Institute of Technology (Class of 2025) studying Course 6-3 (Computer Science and Engineering). I attended Union County Magnet High School from 2017-2021.
 
-Besides computer science, I'm also interested in math, playing video games, solving Rubik's cubes, and much more!
+Besides computer science, I'm also interested in math, robotics playing video games, solving Rubik's cubes, and much more!
 
 ## Internship at Stevens Institute of Technology
 

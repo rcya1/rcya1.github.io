@@ -16,7 +16,7 @@
 title: Ryan Chang
 email: chang.ryan10145@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Personal website / blog for incoming freshman at MIT studying computer science and engineering
+  Personal website / blog for a student at MIT studying computer science and engineering
 github_username: Ryan10145
 minimal_mistakes_skin: contrast
 search: true
@@ -61,7 +61,7 @@ plugins:
 author:
   name   : "Ryan Chang"
   avatar : "https://avatars.githubusercontent.com/u/8119928?v=4"
-  bio    : "Incoming freshman at MIT studying computer science and engineering"
+  bio    : "Student at MIT (Class of 2025) studying Computer Science and Engineering"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -69,9 +69,9 @@ author:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin-in"
       url: "https://www.linkedin.com/in/ryan-chang-105495215/"
-    - label: "chang.ryan10145@gmail.com"
+    - label: "rychang@mit.edu"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:chang.ryan10145@gmail.com"
+      url: "mailto:rychang@mit.edu"
     
 
 footer:
