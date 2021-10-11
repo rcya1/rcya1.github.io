@@ -9,7 +9,7 @@ Besides computer science, I'm also interested in math, robotics playing video ga
 
 ## Internship at Stevens Institute of Technology
 
-During the summers of 2018-2020, I was a research intern at the Life and Light Laboratory at Stevens Institute of Technology in Hoboken. While there, I helped write an algorithm for performing atmospheric correction on ocean satellite data, which helps calculate valuable parameters such as chlorophyll concentration and aerosol optical depth.
+During the summers of 2018-2020, I was a research intern at the Life and Light Laboratory at Stevens Institute of Technology in Hoboken. While there, I helped write an algorithm for performing atmospheric correction on ocean satellite data, which helps calculate valuable parameters such as chlorophyll concentration and aerosol optical depth. It offered great improvements in accuracy over the widely used SEADAS algorithm developed by NASA while still being fast.
 
 I presented my work at the Liberty Science Center during the Partners in Science Symposium. I was also a co-author of the following paper:
 
@@ -34,7 +34,7 @@ A machine learning based data analysis platform for satellite ocean color sensor
 
 ### FRC Robotics
 
-- Programming lead of the FIRST robotics team 1257
+- Software lead of the FIRST robotics team 1257
 - Driver of robot at competitions
 - Wrote [public training curriculum](https://frc1257.github.io/robotics-training/#/) for our software team
 

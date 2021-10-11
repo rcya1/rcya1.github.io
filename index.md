@@ -12,7 +12,9 @@ header:
     - label: "<i class='fas fa-envelope' title='Email'></i>"
       url: "mailto:rychang@mit.edu"
     - label: "Resume"
-      url: "https://docs.google.com/document/d/16DsdvK2kBI4PQ98Oe6ALp_GboH2S2mnwVawCef40sw8/edit?usp=sharing"
+      url: "https://docs.google.com/document/d/1QeGxhxdDuGTAPkCZQEHT-GCuB-1-lNsAehEStuMyjFE/edit?usp=sharing"
+    - label: "About Me"
+      url: "https://ryan10145.github.io/about/"
   caption:
 excerpt: 'Student at the Massachusetts Institute of Technology (Class of 2025) studying Computer Science and Engineering'
 ---
