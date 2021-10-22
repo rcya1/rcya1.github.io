@@ -12,7 +12,7 @@ header:
     - label: "<i class='fas fa-envelope' title='Email'></i>"
       url: "mailto:rychang@mit.edu"
     - label: "Resume"
-      url: "https://docs.google.com/document/d/1QeGxhxdDuGTAPkCZQEHT-GCuB-1-lNsAehEStuMyjFE/edit?usp=sharing"
+      url: "https://docs.google.com/document/d/1L9t3O8Mqk6GoF3IiM7SPbSok2CW1nkBcKtaXzZnJNQA/edit?usp=sharing"
     - label: "About Me"
       url: "https://ryan10145.github.io/about/"
   caption:
