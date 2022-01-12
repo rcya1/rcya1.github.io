@@ -3,18 +3,31 @@ permalink: /about/
 title: "About Me"
 ---
 
-Hi, I'm Ryan! I'm currently attending the Massachusetts Institute of Technology (Class of 2025) studying Course 6-3 (Computer Science and Engineering). I attended Union County Magnet High School from 2017-2021.
+Hi, I'm Ryan! I'm currently attending the Massachusetts Institute of Technology (Class of 2025) majoring in Course 6-3 (Computer Science and Engineering) with a minor in Course 18 (Mathematics). I attended Union County Magnet High School from 2017-2021.
 
 Besides computer science, I'm also interested in math, robotics, playing video games, buildilng / programming random hobby projects, solving Rubik's cubes, and much more!
+
+## Experience
+
+### Software Engineering Internship at Conservation X Labs (January 2022)
+
+Developed the frontend dashboard for [Sentinel](https://conservationxlabs.com/sentinel), a device that uses artificial
+intelligence to recognize animal species for conservation efforts. The device plugs into existing camera hardware and runs customizable machine learning models on the field to analyze images and send that data over the cloud to conservationists. I worked with React, Redux, MUI, MySQL, Firebase, Figma, and Stripe in a team of 4 people for a month.
 
 ## Massachusetts Institute of Technology
 
 ### Notable Coursework
 
+**Freshman Spring**
+- 6.036 - Introduction to Machine Learning
+- 6.009 - Fundamentals of Programming
+- 6.004 - Computation Structures
+- 18.600 - Probability and Random Variables
+
 **Freshman Fall**
 - 6.046 - Design and Analysis of Algorithms
-- 8.02 - Electricity and Magnetism
 - 18.06 - Linear Algebra
+- 8.02 - Electricity and Magnetism
 
 **Prior Credit**
 - 18.02 - Multivariable Calculus
@@ -22,11 +35,8 @@ Besides computer science, I'm also interested in math, robotics, playing video g
 
 ### Clubs
 
-- Solar Electric Vehicle Team
-  - Member of the electrical engineering (EE) subteam, where I work on creating tools for race strategy such as pulling weather/map data from APIs, running energy calculations, creating user interfaces for the drive team, and more!
 - Arcturus Autonomous Boat Team
-  - Member of the navigation subteam (to be updated later as the year progresses)
-- Unmanned Aerial Vehicle Team
+  - Member of the navigation subteam, where I implements pathfinding algorithms, sensor fusion, and computer vision on an autonomous boat / drone combination to complete tasks for the Roboboat competition.
 
 ## High School
 

@@ -5,18 +5,18 @@ header:
   overlay_color: "#5e616c"
   overlay_image: "/assets/img/banner.jpeg"
   actions:
+    - label: "About Me"
+      url: "https://ryan10145.github.io/about/"
+    - label: "Resume"
+      url: "https://docs.google.com/document/d/1ZB0H7d0KE7dz-5wmvdC1396adDMg1Mf_fVSQCaXp-Dk/edit?usp=sharing" 
     - label: "<i class='fab fa-github' title='GitHub'></i>"
       url: "https://www.github.com/Ryan10145"
     - label: "<i class='fab fa-linkedin-in' title='Linkedin'></i>"
       url: "https://www.linkedin.com/in/ryan-chang-105495215/"
     - label: "<i class='fas fa-envelope' title='Email'></i>"
       url: "mailto:rychang@mit.edu"
-    - label: "Resume"
-      url: "https://docs.google.com/document/d/1L9t3O8Mqk6GoF3IiM7SPbSok2CW1nkBcKtaXzZnJNQA/edit?usp=sharing"
-    - label: "About Me"
-      url: "https://ryan10145.github.io/about/"
   caption:
-excerpt: 'Student at the Massachusetts Institute of Technology (Class of 2025) studying Computer Science and Engineering'
+excerpt: 'Student at the Massachusetts Institute of Technology (Class of 2025) majoring in Computer Science and Engineering and minoring in Mathematics'
 ---
 
 <h2 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Blog Posts" }}</h2>
