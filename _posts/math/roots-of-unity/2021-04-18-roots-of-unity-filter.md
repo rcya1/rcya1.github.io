@@ -6,7 +6,7 @@ tags: [Math, Guide, Roots of Unity Filter, Roots of Unity, Complex Numbers]
 math: true
 toc: true
 toc_sticky: true
-excerpt: The main problem we are trying to tackle in this section is the following from one of Thomas Mildorf's mock AIMEs. We can tackle this problem in a variety of ways, but the approach we will be using here is a technique known as roots of unity filter.
+excerpt: The final part of a three part series about roots of unity filter. We go over the roots of unity filter, which is a technique used for summing a subset of the coefficients of a polynomial.
 ---
 
 ## Note

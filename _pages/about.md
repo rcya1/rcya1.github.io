@@ -3,7 +3,7 @@ permalink: /about/
 title: "About Me"
 ---
 
-Hi, I'm Ryan! I'm currently attending the Massachusetts Institute of Technology (Class of 2025) majoring in Course 6-3 (Computer Science and Engineering) with a minor in Course 18 (Mathematics). I attended Union County Magnet High School from 2017-2021.
+Hi, I'm Ryan! I'm currently attending the Massachusetts Institute of Technology (Class of 2025) double majoring in computer science and mathematics with a minor in economics. I attended Union County Magnet High School from 2017-2021.
 
 Besides computer science, I'm also interested in math, robotics, playing video games, buildilng / programming random hobby projects, solving Rubik's cubes, and much more!
 

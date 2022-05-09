@@ -6,7 +6,7 @@ tags: [Math, Guide, Modular Arithmetic]
 math: true
 toc: true
 toc_sticky: true
-excerpt: For modular arithmetic, the operations of addition, subtraction, and multiplication are pretty easy to define and understand. You simply perform the operation and then perform the modulo operator on the output. However, this doesn't apply to division, since division frequently leads to fractions/decimals, which is not what we are looking for when considering remainders.
+excerpt: How to inverse multiplication in modular arithmetic by hand through the extended Euclidean algorithm
 ---
 
 <blockquote class="blockquote-note">

@@ -6,7 +6,7 @@ tags: [Math, Guide, Modular Arithmetic]
 math: true
 toc: true
 toc_sticky: true
-excerpt: Let's say you wanted to calculate the large power of a number modulo another such as 7^39 mod 1000. The most naive way to do this would be to multiply 7 by itself 39 times and then take the remainder when divided by 1000, aka the last 3 digits. However, this technique quickly becomes unmanageable, especially since 7^39 has 32 digits, which would lead to a lot of work and the opportunity to make a lot of mistakes. Instead, we could work smarter, not harder.
+excerpt: How you can calculate 7^39 mod 1000 by hand.
 ---
 
 ## Typical Exponentiation

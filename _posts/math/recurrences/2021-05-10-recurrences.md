@@ -6,7 +6,7 @@ tags: [Math, Guide, Recurrences]
 math: true
 toc: true
 toc_sticky: true
-excerpt: In this article, we'll discuss how to solve both homogenous and non-homogenous linear recurrences with constant coefficients. If you already know what linear recurrences are and all of the vocabulary surrounding them, feel free to just skip to the next section to see how to solve homogenous and non-homogenous linear recurrences. If you're unfamilar with some of these terms, the first section goes over the basic definitions regarding linear recurrences.
+excerpt: How to derive close-formed expressions for all kinds of linear recurrences with constant coefficients
 ---
 
 In this article, we'll discuss how to solve both homogenous and non-homogenous linear recurrences with constant coefficients. If you already know what linear recurrences are and all of the vocabulary surrounding them, feel free to just skip to the next section to see how to solve homogenous and non-homogenous linear recurrences. If you're unfamilar with some of these terms, the first section goes over the basic definitions regarding linear recurrences.

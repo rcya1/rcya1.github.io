@@ -61,7 +61,7 @@ plugins:
 author:
   name   : "Ryan Chang"
   avatar : "https://avatars.githubusercontent.com/u/8119928?v=4"
-  bio    : "Student at MIT (Class of 2025) studying Computer Science and Engineering"
+  bio    : "Student at MIT (Class of 2025) studying computer science, math, and economics"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"

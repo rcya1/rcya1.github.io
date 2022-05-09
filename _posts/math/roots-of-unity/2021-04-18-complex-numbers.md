@@ -6,7 +6,7 @@ tags: [Math, Guide, Roots of Unity Filter, Roots of Unity, Complex Numbers]
 math: true
 toc: true
 toc_sticky: true
-excerpt: A complex number is a number z that can be expressed in the form z = a + bi, where a and b are real numbers, and i = sqrt(-1). All complex numbers can be graphed on the coordinate plane, where the x-axis represents the real component of the complex number, while the y-axis represents the imaginary component of the complex number.
+excerpt: The first part of a three-part series about the roots of unity filter. Covers the basic operations associated with complex numbers.
 ---
 
 ## Note
