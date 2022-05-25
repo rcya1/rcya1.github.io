@@ -3,9 +3,9 @@ permalink: /about/
 title: "About Me"
 ---
 
-Hi, I'm Ryan! I'm currently attending the Massachusetts Institute of Technology (Class of 2025) double majoring in computer science and mathematics with a minor in economics. I attended Union County Magnet High School from 2017-2021.
+Hi, I'm Ryan! I'm currently attending the Massachusetts Institute of Technology (Class of 2025) double majoring in computer science and math with a minor in economics. I attended Union County Magnet High School from 2017-2021.
 
-Besides computer science, I'm also interested in math, robotics, playing video games, buildilng / programming random hobby projects, solving Rubik's cubes, and much more!
+Besides computer science, I'm also interested in math, robotics, playing video games, building / programming random hobby projects, solving Rubik's cubes, and much more!
 
 ## Experience
 
@@ -16,27 +16,33 @@ intelligence to recognize animal species for conservation efforts. The device pl
 
 ## Massachusetts Institute of Technology
 
-### Notable Coursework
+### Coursework
 
-**Freshman Spring**
-- 6.036 - Introduction to Machine Learning
-- 6.009 - Fundamentals of Programming
-- 6.004 - Computation Structures
-- 18.600 - Probability and Random Variables
+**Computer Science**
+- Advanced Algorithms* (6.854)
+- Quantitative Methods for Natural Language Processing* (6.806)
+- Design and Analysis of Algorithms (6.046J)
+- Introduction to Machine Learning (6.036)
+- Computation Structures (6.004)
+- Fundamentals of Programming (6.009)
 
-**Freshman Fall**
-- 6.046 - Design and Analysis of Algorithms
-- 18.06 - Linear Algebra
-- 8.02 - Electricity and Magnetism
+**Mathematics**
+- Theory of Computation* (18.404)
+- Probability and Random Variables (18.600)
+- Linear Algebra (18.06)
+- Multivariable Calculus (18.02)
 
-**Prior Credit**
-- 18.02 - Multivariable Calculus
-- 8.01 - Classical Mechanics
+**Economics**
+- Principles of Microeconomics* (14.01)
+
+`*` = taking in Fall 2022
 
 ### Clubs
 
-- Arcturus Autonomous Boat Team
-  - Member of the navigation subteam, where I implements pathfinding algorithms, sensor fusion, and computer vision on an autonomous boat / drone combination to complete tasks for the Roboboat competition.
+- Arcturus Autonomous Boat Team: Path Planning and State Estimation Lead
+  - Responsible for developing algorithms to estimate the current position and velocity of our boat so it can plan and execute paths around obstacles to complete tasks for the Roboboat competition. Worked extensively with Robot Operating System (ROS), Ardupilot, and the Pixhawk flight controller.
+- Battlecode Competition
+  - Develop infrastructure and game for the annual Battlecode competition hosted by MIT where teams from around the world write AI players to compete in a tournament for cash prizes. See [the Battlecode website](https://battlecode.org/) for more details.
 
 ## High School
 
