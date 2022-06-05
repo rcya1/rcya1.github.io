@@ -8,7 +8,7 @@ header:
     - label: "About Me"
       url: "https://ryan10145.github.io/about/"
     - label: "Resume"
-      url: "https://docs.google.com/document/d/1ZB0H7d0KE7dz-5wmvdC1396adDMg1Mf_fVSQCaXp-Dk/edit?usp=sharing" 
+      url: "https://docs.google.com/document/d/1W0rkUF62IKk57XQjYMBgDUZrhsZlN9sKQl7MJuk4vJk" 
     - label: "<i class='fab fa-github' title='GitHub'></i>"
       url: "https://www.github.com/Ryan10145"
     - label: "<i class='fab fa-linkedin-in' title='Linkedin'></i>"
