@@ -16,7 +16,7 @@ header:
     - label: "<i class='fas fa-envelope' title='Email'></i>"
       url: "mailto:rychang@mit.edu"
   caption:
-excerpt: 'Student at the Massachusetts Institute of Technology (Class of 2025) double majoring in computer science with math with a minor in economics.'
+excerpt: 'Student at the Massachusetts Institute of Technology double majoring in computer science with math with a minor in economics.'
 ---
 
 <h2 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Blog Posts" }}</h2>
