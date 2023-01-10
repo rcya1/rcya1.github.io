@@ -1,5 +1,5 @@
-# Ryan Chang's Personal Website / Blog
+## ⚠️ Deprecated Website ⚠️
 
-Personal website / blog based off of the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) by [Michael Rose](https://github.com/mmistakes)
+I've switched off of this website template and made a new one at https://rcya1.vercel.app
 
-To run locally, use: `bundle exec jekyll serve` after installing the necessary software.
+The source code for this repository has been archived and the deployment has been shifted to just redirect to the new site.
